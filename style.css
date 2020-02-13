@@ -160,7 +160,7 @@
 .services {
   background-color: #f2f2f2;
   color: #666d89;
-  padding-bottom: 73px;
+  padding-bottom: 63px;
   box-sizing: border-box;
   border-bottom: 6px solid #ffffff;
 }
@@ -191,7 +191,9 @@
 
 .services__list-item {
   padding-left: 80px;
+  height: 110px;
   position: relative;
+  overflow: hidden;
 }
 
 .services__item-header {
