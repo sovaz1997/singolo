@@ -75,8 +75,7 @@
   width: 5px;
   height: 5px;
   position: absolute;
-  right: -14px;
-  top: -1px;
+  right: -16px;
   top: 0;
   color: #494e62;
 }
@@ -125,6 +124,17 @@
   background-color: #f06c64;
   box-sizing: border-box;
   border-bottom: 6px solid #ea676b;
+  position: relative;
+}
+
+.slider__phone-left {
+  position: relative;
+  left: -5px;
+}
+
+.slider__phone-right {
+  position: relative;
+  left: 6px;
 }
 
 .slider .wrapper {
