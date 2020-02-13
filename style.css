@@ -5,6 +5,16 @@
   font-family: "Lato", sans-serif;
 }
 
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
 .wrapper {
   max-width: 1020px;
   padding: 0 30px;
@@ -51,4 +61,59 @@
 
 .site-header__nav-item a:hover {
   color: #f06c64;
+}
+
+.phone {
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.phone--vertical {
+  background-image: url("assets/img/phone-vertical.png");
+  width: 240px;
+  height: 483px;
+}
+
+.phone--horizontal {
+  background-image: url("assets/img/phone-horizontal.png");
+  width: 483px;
+  height: 240px;
+}
+
+.phone .phone__display {
+  position: absolute;
+}
+
+.phone--vertical .phone__display {
+  left: 13px;
+  top: 62px;
+}
+
+.phone--horizontal .phone__display {
+  left: 62px;
+  top: 13px;
+}
+
+.slider {
+  background-color: #f06c64;
+}
+
+.slider .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 53px 41px 64px;
+}
+
+.slider__arrow {
+  width: 16px;
+  height: 27px;
+  background: url("assets/img/left-arrow.png") no-repeat;
+  padding-left: 11px;
+  border: none;
+  cursor: pointer;
+}
+
+.slider__arrow--right {
+  transform: rotate(180deg);
 }
