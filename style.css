@@ -22,6 +22,11 @@
   box-sizing: border-box;
 }
 
+.wrapper--inner {  
+  padding-left: 40px;
+  padding-right: 40px;;
+}
+
 .site-header {
   background-color: #2d303a;
   height: 95px;
@@ -103,14 +108,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 53px 41px 64px;
+  padding-top: 53px;
+  padding-bottom: 64px;
 }
 
 .slider__arrow {
   width: 16px;
   height: 27px;
   background: url("assets/img/left-arrow.png") no-repeat;
-  padding-left: 11px;
   border: none;
   cursor: pointer;
 }
