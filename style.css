@@ -66,6 +66,7 @@
 .phone {
   background-repeat: no-repeat;
   position: relative;
+  flex-shrink: 0;
 }
 
 .phone--vertical {
