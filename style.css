@@ -42,6 +42,7 @@
   font-weight: bold;
   color: #ffffff;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .logo__star {
@@ -155,6 +156,10 @@
   background: url("assets/img/left-arrow.png") no-repeat;
   border: none;
   cursor: pointer;
+}
+
+.slider__arrow:hover {
+  opacity: 75%;
 }
 
 .slider__arrow--right {
