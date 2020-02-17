@@ -45,7 +45,8 @@
   text-decoration: none;
 }
 
-.logo__star {
+.logo::after {
+  content: "*";
   color: #f06c64;
 }
 
