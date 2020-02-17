@@ -85,10 +85,6 @@
   color: #494e62;
 }
 
-.site-header__nav-item--active a {
-  color: #f06c64;
-}
-
 .site-header__nav-item a:hover {
   color: #f06c64;
 }
