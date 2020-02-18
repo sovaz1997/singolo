@@ -49,3 +49,23 @@
 .portfolio {
   background-color: #2d303a;
 }
+
+.filter {
+  display: flex;
+}
+
+.filter__item {
+  color: #767e9e;
+  border: 1px solid rgb(102, 109, 137);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  margin-right: 10px;
+  line-height: 20px;
+  font-size: 12px;
+}
+
+.filter__item--active {
+  border-color: rgb(197, 197, 197);
+  color: #dedede;
+}
