@@ -1,0 +1,27 @@
+@import "assets/fonts/fonts.css";
+
+* {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  min-width: 1020px;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.wrapper {
+  max-width: 1020px;
+  padding: 0 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
