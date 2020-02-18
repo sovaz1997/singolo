@@ -67,6 +67,7 @@ body {
   margin-right: 10px;
   line-height: 18px;
   font-size: 12px;
+  transition: 0.27s ease-out;
 }
 
 .filter__item--active, .filter__item:hover {
@@ -149,10 +150,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
+  transition: 0.27s ease-out;
 }
 
 .social-list__item:hover {
   background-color: #2d303a;
+  
 }
 
 .social-list__item--facebook {
