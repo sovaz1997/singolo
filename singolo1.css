@@ -5,6 +5,10 @@
   font-family: "Lato", sans-serif;
 }
 
+body {
+  min-width: 1020px;
+}
+
 .visually-hidden {
 	position: absolute !important;
 	clip: rect(1px, 1px, 1px, 1px);
