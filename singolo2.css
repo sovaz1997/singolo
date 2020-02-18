@@ -132,6 +132,7 @@
   margin-right: 7px;
   background-repeat: no-repeat;
   background-position: center;
+  display: block;
 }
 
 .social-list__item--facebook {
