@@ -21,3 +21,26 @@
   margin: 0 auto;
   box-sizing: border-box;
 }
+
+.section {
+  padding-top: 67px;
+  padding-bottom: 73px;
+  color: #666d89;
+}
+
+.section__header {
+  padding-bottom: 49px;
+  line-height: 30px;
+}
+
+.section__name {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-bottom: 33px;
+  font-weight: 900;
+}
+
+.section__description {
+  font-size: 18px;
+  font-weight: 300;
+}
