@@ -151,6 +151,10 @@ body {
   display: block;
 }
 
+.social-list__item:hover {
+  background-color: #2d303a;
+}
+
 .social-list__item--facebook {
   background-image: url("assets/img/ico-facebook.svg");
   background-size: 8px;
