@@ -121,6 +121,8 @@ body {
   line-height: 18px;
   font-weight: 900;
   padding-top: 4px;
+  overflow: hidden;
+  height: 18px;
 }
 
 .about-us__person-description {
