@@ -25,7 +25,6 @@
 .section {
   padding-top: 67px;
   padding-bottom: 73px;
-  color: #666d89;
 }
 
 .section__header {
@@ -38,9 +37,15 @@
   text-transform: uppercase;
   padding-bottom: 33px;
   font-weight: 900;
+  color: #666d89;
 }
 
 .section__description {
   font-size: 18px;
   font-weight: 300;
+  color: #767e9e;
+}
+
+.portfolio {
+  background-color: #2d303a;
 }
