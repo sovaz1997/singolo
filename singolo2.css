@@ -69,3 +69,12 @@
   border-color: rgb(197, 197, 197);
   color: #dedede;
 }
+
+.portfolio__works {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  gap: 20px;
+  margin-top: 19px;
+}
