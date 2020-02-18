@@ -221,8 +221,17 @@
   text-align: justify;
 }
 
-.services__item-image {
+.services__item-image-border {
+  
   position: absolute;
   left: 0;
   top: 0;
+  width: 59px;
+  height: 59px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #666D89;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
