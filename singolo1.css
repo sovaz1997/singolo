@@ -76,6 +76,10 @@
   height: 100%;
 }
 
+.site-header__nav-item--active a {
+  color: #f06c64;
+}
+
 .site-header__nav-item:not(:last-child)::after {
   content: ".";
   display: block;
