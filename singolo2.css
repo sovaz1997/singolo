@@ -69,7 +69,7 @@ body {
   font-size: 12px;
 }
 
-.filter__item--active {
+.filter__item--active, .filter__item:hover {
   border-color: rgb(197, 197, 197);
   color: #dedede;
 }
