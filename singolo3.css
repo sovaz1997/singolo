@@ -213,3 +213,19 @@ body {
 .copyright {
   color: #767e9e;
 }
+
+.form__submit {
+  height: 38px;
+  width: 100px;
+  border: none;
+  background-color: #d6564f;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #f0d8d9;
+  transition: 0.27s ease-out;
+}
+
+.form__submit:hover {
+  background-color: #bd4c46;
+}
