@@ -77,6 +77,10 @@ body {
   background-size: 14px;
 }
 
+.social-list--footer .social-list__item:hover {
+  background-color: #ffffff;
+}
+
 .section {
   padding-top: 67px;
   padding-bottom: 64px;
