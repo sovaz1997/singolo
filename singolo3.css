@@ -110,6 +110,7 @@ body {
 
 .quote {
   background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
 }
 
 .form {
@@ -154,4 +155,51 @@ body {
 .contact-information__description {
   font-size: 12px;
   line-height: 21.56px;
+  margin-bottom: 31px;
+}
+
+.contact {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 10px;
+  padding-left: 23px;
+  position: relative;
+}
+
+.contact::before {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 23px;
+  position: absolute;
+  left: 0;
+  background-repeat: no-repeat;
+}
+
+.contact--location::before {
+  background-image: url("./assets/img/ico-contact-location.svg");
+}
+
+.contact--tel::before {
+  background-image: url("./assets/img/ico-contact-tel.svg");
+}
+
+.contact--email::before {
+  background-image: url("./assets/img/ico-contact-email.svg");
+}
+
+.site-footer {
+  background-color: #2d303a;
+  height: 76px;
+
+}
+
+.site-footer .wrapper{
+  align-items: center;
+  height: 100%;
+}
+
+.copyright {
+  color: #767e9e;
 }
