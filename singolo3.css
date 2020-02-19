@@ -175,6 +175,8 @@ body {
   margin-bottom: 10px;
   padding-left: 23px;
   position: relative;
+  color: #f0d8d9;
+  text-decoration: none;
 }
 
 .contact::before {
