@@ -134,6 +134,12 @@ body {
   max-width: 100%;
   min-width: 100%;
   box-sizing: border-box;
+  transition: 0.27s ease-out;
+}
+
+.input-text:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .input-text--textarea {
