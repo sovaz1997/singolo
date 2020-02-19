@@ -117,6 +117,10 @@ body {
   border-bottom: 6px solid #ea676b;
 }
 
+.quote__content {
+  margin-top: 33px;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -128,8 +132,10 @@ body {
   background-color: #d6564f;
   border: none;
   border-radius: 4px;
-  padding: 15px;
+  padding-left: 15px;
+  height: 38px;
   font-size: 12px;
+  line-height: 12px;
   color: #f0d8d9;
   max-width: 100%;
   min-width: 100%;
@@ -142,8 +148,10 @@ body {
   color: #000000;
 }
 
-.input-text--textarea {
+.input-text.input-text--textarea {
   min-height: 202px;
+  padding-top: 12px;
+
 }
 
 .input-text::placeholder {
@@ -159,13 +167,13 @@ body {
   font-size: 18px;
   font-weight: 900;
   line-height: 18px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .contact-information__description {
   font-size: 12px;
   line-height: 21.56px;
-  margin-bottom: 31px;
+  margin-bottom: 29px;
 }
 
 .contact {
@@ -182,8 +190,8 @@ body {
 .contact::before {
   content: "";
   display: block;
-  height: 10px;
-  width: 23px;
+  width: 13px;
+  height: 12px;
   position: absolute;
   left: 0;
   background-repeat: no-repeat;
@@ -191,14 +199,19 @@ body {
 
 .contact--location::before {
   background-image: url("./assets/img/ico-contact-location.svg");
+  background-size: 7px;
+  background-position-x: 3px;
 }
 
 .contact--tel::before {
   background-image: url("./assets/img/ico-contact-tel.svg");
+  background-size: 11px;
+  background-position-x: 1px;
 }
 
 .contact--email::before {
   background-image: url("./assets/img/ico-contact-email.svg");
+  background-size: 13px;
 }
 
 .site-footer {
@@ -213,7 +226,8 @@ body {
 }
 
 .copyright {
-  color: #767e9e;
+  color: #666d89;
+  font-size: 12px;
 }
 
 .form__submit {
