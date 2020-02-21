@@ -358,7 +358,6 @@ body {
   transition: 0.27s ease-out;
 }
 
-
 .social-list__item:hover {
   background-color: #2d303a;
   
@@ -487,13 +486,13 @@ body {
 .contact--location::before {
   background-image: url("./assets/img/ico-contact-location.svg");
   background-size: 7px;
-  background-position-x: 3px;
+  background-position: 3px;
 }
 
 .contact--tel::before {
   background-image: url("./assets/img/ico-contact-tel.svg");
   background-size: 11px;
-  background-position-x: 1px;
+  background-position: 1px;
 }
 
 .contact--email::before {
