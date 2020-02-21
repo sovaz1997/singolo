@@ -347,37 +347,29 @@ body {
   border: 1px solid #767e9e;
   box-sizing: border-box;
   border-radius: 50%;
-  
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.27s ease-out;
+  fill: #767e9e;
 }
 
 .social-list__item:hover {
   background-color: #2d303a;
-  
 }
 
-.social-list__item--facebook {
-  background-image: url("./assets/img/ico-facebook.svg");
-  background-size: 8px;
+.social-list__item:hover svg {
+  fill: white;
 }
 
-.social-list__item--google-plus {
-  background-image: url("./assets/img/ico-google-plus.svg");
-  background-size: 14px;
+.social-list--footer .social-list__item:hover {
+  background-color: #ffffff;
 }
 
-.social-list__item--twitter {
-  background-image: url("./assets/img/ico-twitter.svg");
-  background-size: 14px;
+.social-list--footer .social-list__item:hover svg {
+  fill: #2d303a;
 }
 
-.social-list__item--linkedin {
-  background-image: url("./assets/img/ico-linkedin.svg");
-  background-size: 14px;
-}
 
 .flex-justify {
   display: flex;
