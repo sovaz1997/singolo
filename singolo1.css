@@ -161,10 +161,12 @@ body {
   background: url("assets/img/left-arrow.png") no-repeat;
   border: none;
   cursor: pointer;
+  border-radius: 3px;
+  transition: 0.27s ease-out;
 }
 
 .slider__arrow:hover {
-  opacity: 75%;
+  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.25);
 }
 
 .slider__arrow--right {
