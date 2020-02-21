@@ -89,8 +89,8 @@ body {
   content: ".";
   display: block;
   position: absolute;
-  right: -18px;
-  top: -2px;
+  right: -15px;
+  top: -3px;
   color: #494e62;
 }
 
@@ -179,7 +179,6 @@ body {
   padding-bottom: 63px;
   box-sizing: border-box;
   border-bottom: 6px solid #ffffff;
-  text-align: justify;
 }
 
 .services__header {
