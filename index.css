@@ -428,6 +428,10 @@ body {
 
 }
 
+.input-text::placeholder {
+  color: #f48c8f;
+}
+
 .contact-information {
   width: 300px;
   color: #f0d8d9;
@@ -487,7 +491,6 @@ body {
 .site-footer {
   background-color: #2d303a;
   height: 76px;
-
 }
 
 .site-footer .wrapper{
