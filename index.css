@@ -81,10 +81,6 @@ body {
   transition: 0.27s ease-out;
 }
 
-.site-header__nav-item--active a {
-  color: #f06c64;
-}
-
 .site-header__nav-item:not(:last-child)::after {
   content: ".";
   display: block;
