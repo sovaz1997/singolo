@@ -166,7 +166,7 @@ body {
 }
 
 .slider__arrow:hover {
-  box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.25);
+  box-shadow: 0 0 13px 0 rgba(0,0,0,0.25);
 }
 
 .slider__arrow--right {
