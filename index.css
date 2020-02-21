@@ -428,10 +428,6 @@ body {
 
 }
 
-.input-text::placeholder {
-  color: #f48c8f;
-}
-
 .contact-information {
   width: 300px;
   color: #f0d8d9;
