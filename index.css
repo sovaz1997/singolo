@@ -514,6 +514,7 @@ body {
   text-transform: uppercase;
   color: #f0d8d9;
   transition: 0.27s ease-out;
+  font-weight: bold;
 }
 
 .form__submit:hover {
