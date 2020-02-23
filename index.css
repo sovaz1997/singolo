@@ -416,6 +416,10 @@ body {
   transition: 0.27s ease-out;
 }
 
+.input-text:hover {
+  background-color: #bd4c46;
+}
+
 .input-text:focus {
   background-color: #ffffff;
   color: #000000;
