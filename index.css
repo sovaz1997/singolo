@@ -78,7 +78,7 @@ body {
   text-transform: uppercase;
   display: block;
   height: 100%;
-  transition: 0.27s ease-out;
+  transition: color .27s ease-out;
 }
 
 .site-header__nav-item:not(:last-child)::after {
@@ -158,7 +158,7 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 3px;
-  transition: 0.27s ease-out;
+  transition: filter .27s ease-out;
 }
 
 .slider__arrow:hover {
@@ -265,7 +265,7 @@ body {
   margin-right: 10px;
   line-height: 18px;
   font-size: 12px;
-  transition: 0.27s ease-out;
+  transition: .27s ease-out;
 }
 
 .filter__item--active, .filter__item:hover {
@@ -349,7 +349,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.27s ease-out;
+  transition: background-color .27s ease-out;
   fill: #767e9e;
 }
 
@@ -413,7 +413,7 @@ body {
   max-width: 100%;
   min-width: 100%;
   box-sizing: border-box;
-  transition: 0.27s ease-out;
+  transition: background-color .27s ease-out;
 }
 
 .input-text:hover {
@@ -515,7 +515,7 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   color: #f0d8d9;
-  transition: 0.27s ease-out;
+  transition: background-color .27s ease-out;
   font-weight: bold;
 }
 
