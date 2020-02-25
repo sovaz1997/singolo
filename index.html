@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./index.css">
 </head>
-<body class="content">
+<body class="content preload">
   <header class="site-header">
     <div class="wrapper">
       <a class="site-header__logo logo" href="./index.html">Singolo</a>
@@ -412,5 +412,10 @@
       </ul>
     </div>
   </footer>
+  <script>
+    window.onload = function() {
+      document.querySelector('body').classList.remove('preload');
+    };
+  </script>
 </body>
 </html>
