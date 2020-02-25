@@ -270,6 +270,7 @@ body {
   line-height: 18px;
   font-size: 12px;
   transition: .27s ease-out;
+  outline: none;
 }
 
 .filter__item--active, .filter__item:hover {
@@ -417,11 +418,14 @@ body {
   max-width: 100%;
   min-width: 100%;
   box-sizing: border-box;
-  transition: background-color .27s ease-out;
+  transition: background-color .27s ease-out,
+  box-shadow .27s ease-out;
+  outline: none;
 }
 
 .input-text:hover {
   background-color: #bd4c46;
+  box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.39);
 }
 
 .input-text:focus {
@@ -519,10 +523,13 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   color: #f0d8d9;
-  transition: background-color .27s ease-out;
+  transition: background-color .27s ease-out,
+  background-color .27s ease-out;
   font-weight: bold;
+  outline: none;
 }
 
 .form__submit:hover {
   background-color: #bd4c46;
+  box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.39);
 }
