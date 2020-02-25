@@ -423,13 +423,14 @@ body {
   outline: none;
 }
 
-.input-text:hover {
+.input-text:hover, .input-text:focus {
   background-color: #bd4c46;
   box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.39);
 }
 
 .input-text:focus {
   background-color: #ffffff;
+  box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.39);
   color: #000000;
 }
 
