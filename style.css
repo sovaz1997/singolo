@@ -212,6 +212,7 @@ body {
   line-height: 21.56px;
   color: #767e9e;
   text-align: justify;
+  display: block;
 }
 
 .services__item-image-border {
