@@ -333,7 +333,7 @@ body {
   font-size: 18px;
   line-height: 18px;
   font-weight: 900;
-  padding-top: 4px;
+  padding-top: 6px;
   overflow: hidden;
   height: 18px;
 }
@@ -342,7 +342,7 @@ body {
   font-size: 12px;
   line-height: 21.56px;
   color: #767e9e;
-  padding-bottom: 12px;
+  padding-bottom: 13px;
 }
 
 .social-list {
