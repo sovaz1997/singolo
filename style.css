@@ -139,12 +139,12 @@ body {
 
 .slider__phone-left {
   position: relative;
-  left: -6px;
+  left: -5px;
 }
 
 .slider__phone-right {
   position: relative;
-  left: 5px;
+  left: 6px;
 }
 
 .slider .wrapper {
