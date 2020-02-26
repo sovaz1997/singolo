@@ -86,11 +86,11 @@ body {
 }
 
 .site-header__nav-item:not(:last-child)::after {
-  content: ".";
+  content: "\00B7";
   display: block;
   position: absolute;
   right: -15px;
-  top: -3px;
+  top: 0;
   color: #494e62;
 }
 
