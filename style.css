@@ -476,7 +476,7 @@ body {
   display: block;
   font-size: 12px;
   line-height: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 9.5px;
   padding-left: 23px;
   position: relative;
   color: #f0d8d9;
@@ -508,6 +508,7 @@ body {
 .contact--email::before {
   background-image: url("./assets/img/ico-contact-email.svg");
   background-size: 13px;
+  background-position: 1px;
 }
 
 .site-footer {
