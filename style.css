@@ -273,7 +273,14 @@ body {
   outline: none;
 }
 
-.filter__item--active, .filter__item:hover {
+.filter__item:hover {
+  background-color: #dedede;
+  color: rgb(102, 109, 137);
+  border-color: #dedede;
+}
+
+
+.filter__item--active {
   border-color: rgb(197, 197, 197);
   color: #dedede;
 }
