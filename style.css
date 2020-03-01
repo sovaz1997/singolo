@@ -323,6 +323,7 @@ body {
   color: #666d89;
   height: 443px;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .about-us__person-image {
