@@ -433,6 +433,7 @@ body {
   transition: background-color .27s ease-out,
   box-shadow .27s ease-out;
   outline: none;
+  resize: none;
 }
 
 .input-text:hover, .input-text:focus {
@@ -447,9 +448,8 @@ body {
 }
 
 .input-text.input-text--textarea {
-  min-height: 202px;
+  height: 202px;
   padding-top: 12px;
-
 }
 
 .input-text::placeholder {
