@@ -136,6 +136,7 @@ body {
 .phone {
   /* Позиционирование */
   position: relative;
+
   /* Блочная модель */
   flex-shrink: 0;
 
@@ -244,7 +245,6 @@ body {
   padding-bottom: 48px;
 
   /* Типографика */
-  
   color: #666d89;
 
   /* Оформление */
@@ -393,7 +393,6 @@ body {
   border-color: #dedede;
 }
 
-
 .filter__item--active {
   /* Типографика */
   color: #dedede;
@@ -538,7 +537,6 @@ body {
   /* Оформление */
   fill: #2d303a;
 }
-
 
 .flex-justify {
   /* Блочная модель */
