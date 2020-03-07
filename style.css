@@ -319,6 +319,7 @@ body {
 
   /* Типографика */
   line-height: 30px;
+  text-align: justify;
 }
 
 .section__name {
@@ -479,6 +480,7 @@ body {
   font-size: 12px;
   line-height: 21.56px;
   color: #767e9e;
+  text-align: justify;
 }
 
 .social-list {
@@ -659,6 +661,7 @@ body {
   /* Типографика */
   font-size: 12px;
   line-height: 21.56px;
+  text-align: justify;
 }
 
 .contact {
