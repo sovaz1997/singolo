@@ -191,7 +191,6 @@ body {
 }
 
 .slider__arrow {
-  
   /* Блочная модель */
   width: 16px;
   height: 27px;
@@ -211,7 +210,17 @@ body {
   filter: brightness(80%);
 }
 
+.slider__arrow--left {
+  /* Позиционирование */
+  position: relative;
+  left: 2px;
+}
+
 .slider__arrow--right {
+  /* Позиционирование */
+  position: relative;
+  left: 1px;
+
   /* Оформление */
   transform: rotate(180deg);
 }
@@ -256,6 +265,10 @@ body {
 }
 
 .services__item-header {
+  /* Позиционирование */
+  position: relative;
+  bottom: 2px;
+
   /* Блочная модель */
   padding-bottom: 7px;
   display: flex;
@@ -278,23 +291,21 @@ body {
   text-align: justify;
 }
 
-.services__item-image-border {
+.services__item-image {
   /* Позиционирование */
   position: absolute;
   left: 0;
   top: 0;
+}
 
-  /* Блочная модель */
-  width: 59px;
-  height: 59px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.services__list-item:nth-child(1) .services__item-image {
+  /* Позиционирование */
+  left: 1px;
+}
 
-  /* Оформление */
-  border-radius: 50%;
-  border: 2px solid #666D89;
+.services__list-item:nth-child(4) .services__item-image {
+  /* Позиционирование */
+  left: 1px;
 }
 
 .section {
@@ -438,6 +449,11 @@ body {
   /* Блочная модель */
   width: 300px;
   height: 300px;
+}
+
+.about-us__person:nth-child(2) {
+  position: relative;
+  left: -1px;
 }
 
 .about-us__person-name {
