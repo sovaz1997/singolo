@@ -630,6 +630,7 @@ body {
 .input-text::placeholder {
   /* Типографика */
   color: #f48c8f;
+  opacity: 1;
 }
 
 .contact-information {
