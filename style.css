@@ -272,6 +272,7 @@ body {
   font-size: 12px;
   transition: .27s ease-out;
   outline: none;
+  padding: 1px 6px;
 }
 
 .filter__item:hover {
