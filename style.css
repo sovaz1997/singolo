@@ -551,7 +551,7 @@ body {
   /* Блочная модель */
   display: flex;
   flex-direction: column;
-  width: 620px;
+  width: 619px;
 }
 
 .input-text {
