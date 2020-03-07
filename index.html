@@ -253,9 +253,16 @@
         </div>
         <div class="quote__content flex-justify">
           <form class="form" action="#" method="POST">
+            <label class="visually-hidden" for="input-name">Имя:</label>
             <input id="input-name" class="input-text" type="text" name="name" placeholder="Name (Required)" required>
+            
+            <label class="visually-hidden" for="input-email">E-mail:</label>
             <input id="input-email" class="input-text" type="email" name="email" placeholder="Email (Required)" required>
+            
+            <label class="visually-hidden" for="input-subject">Subject:</label>
             <input id="input-subject" class="input-text" type="text" name="subject" placeholder="Subject">
+            
+            <label class="visually-hidden" for="input-details">Details:</label>
             <textarea id="input-details" class="input-text input-text--textarea" name="details" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
             <input class="form__submit" type="submit" value="Submit">
           </form>
