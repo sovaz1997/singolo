@@ -148,35 +148,12 @@ body {
   /* Блочная модель */
   width: 240px;
   height: 483px;
-
-  /* Оформление */
-  background-image: url("assets/img/phone-vertical.png");
 }
 
 .phone--horizontal {
   /* Блочная модель */
   width: 483px;
   height: 240px;
-
-  /* Оформление */
-  background-image: url("assets/img/phone-horizontal.png");
-}
-
-.phone .phone__display {
-  /* Позиционирование */
-  position: absolute;
-}
-
-.phone--vertical .phone__display {
-  /* Позиционирование */
-  left: 14px;
-  top: 65px;
-}
-
-.phone--horizontal .phone__display {
-  /* Позиционирование */
-  left: 60px;
-  top: 13px;
 }
 
 .slider {
@@ -201,6 +178,7 @@ body {
   /* Позиционирование */
   position: relative;
   left: 6px;
+  bottom: 1px;
 }
 
 .slider .wrapper {
