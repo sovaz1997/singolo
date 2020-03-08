@@ -703,9 +703,15 @@ body {
 }
 
 .copyright {
+  /* Позиционирование */
+  position: relative;
+  left: 2px;
+  bottom: 1px;
+
   /* Типографика */
   color: #666d89;
   font-size: 12px;
+  letter-spacing: -0.0125em;
 }
 
 .form__submit {
