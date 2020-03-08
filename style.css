@@ -692,6 +692,7 @@ body {
 
   /* Оформление */
   background-repeat: no-repeat;
+  background-position: center;
 
   /* Разное */
   content: "";
@@ -699,23 +700,17 @@ body {
 
 .contact--location::before {
   /* Оформление */
-  background-image: url("./assets/img/ico-contact-location.svg");
-  background-size: 7px;
-  background-position: 3px;
+  background-image: url("./assets/img/ico-location.svg");
 }
 
 .contact--tel::before {
   /* Оформление */
-  background-image: url("./assets/img/ico-contact-tel.svg");
-  background-size: 11px;
-  background-position: 1px;
+  background-image: url("./assets/img/ico-phone.svg");
 }
 
 .contact--email::before {
   /* Оформление */
-  background-image: url("./assets/img/ico-contact-email.svg");
-  background-size: 13px;
-  background-position: 1px;
+  background-image: url("./assets/img/ico-mail.svg");
 }
 
 .site-footer {
