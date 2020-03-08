@@ -452,11 +452,6 @@ body {
   height: 300px;
 }
 
-.about-us__person:nth-child(2) {
-  position: relative;
-  left: -1px;
-}
-
 .about-us__person-name {
   /* Блочная модель */
   height: 18px;
@@ -489,49 +484,20 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 32px);
   grid-template-rows: 32px;
-  grid-gap: 8.5px;
+  grid-gap: 8px;
 
   /* Оформление */
   list-style: none;
 }
 
 .social-list__item {
-  /*Блочная модель */
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* Оформление */
-  background-color: transparent;
-  border: 1px solid #767e9e;
-  border-radius: 50%;
-  fill: #767e9e;
-
   /* Анимация */
-  transition: background-color .27s ease-out;
+  transition: filter .27s ease-out;
 }
 
 .social-list__item:hover {
   /* Оформление */
-  background-color: #2d303a;
-}
-
-.social-list__item:hover svg {
-  /* Оформление */
-  fill: white;
-}
-
-.social-list--footer .social-list__item:hover {
-  /* Оформление */
-  background-color: #ffffff;
-}
-
-.social-list--footer .social-list__item:hover svg {
-  /* Оформление */
-  fill: #2d303a;
+  filter: brightness(1.5);
 }
 
 .flex-justify {
@@ -680,6 +646,12 @@ body {
   text-decoration: none;
 }
 
+.contact--tel {
+  /* Позиционирование */
+  position: relative;
+  bottom: 1px;
+}
+
 .contact::before {
   /* Позиционирование */
   position: absolute;
@@ -688,7 +660,7 @@ body {
   /* Блочная модель */
   display: block;
   width: 13px;
-  height: 12px;
+  height: 11px;
 
   /* Оформление */
   background-repeat: no-repeat;
@@ -700,17 +672,20 @@ body {
 
 .contact--location::before {
   /* Оформление */
-  background-image: url("./assets/img/ico-location.svg");
+  background-image: url("./assets/img/ico-location.png");
 }
 
 .contact--tel::before {
   /* Оформление */
-  background-image: url("./assets/img/ico-phone.svg");
+  background-image: url("./assets/img/ico-phone.png");
+
 }
 
 .contact--email::before {
+  /* Позиционирование */
+  top: 1px;
   /* Оформление */
-  background-image: url("./assets/img/ico-mail.svg");
+  background-image: url("./assets/img/ico-mail.png");
 }
 
 .site-footer {
