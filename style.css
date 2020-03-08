@@ -270,7 +270,7 @@ body {
   bottom: 2px;
 
   /* Блочная модель */
-  padding-bottom: 7px;
+  padding-bottom: 8px;
   display: flex;
   flex-direction: column;
   
