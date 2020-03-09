@@ -73,7 +73,7 @@ body {
 
   /* Блочная модель */
   height: 30px;
-  margin-left: 28.67px;
+  margin-left: 32.5px;
   margin-top: 18px;
 }
 
@@ -86,16 +86,22 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: -0.035em;
   
   /* Анимация */
   transition: color .27s ease-out;
 }
 
+.site-header__logo {
+  position: relative;
+  top: 2px;
+}
+
 .site-header__nav-item:not(:last-child)::after {
   /* Позиционирование */
   position: absolute;
-  right: -15px;
-  top: 0;
+  right: -18px;
+  top: -1px;
 
   /* Блочная модель */
   display: block;
@@ -146,6 +152,10 @@ body {
 }
 
 .phone--vertical {
+  /* Позиционирование */
+  top: 1px;
+  right: 5px;
+
   /* Блочная модель */
   width: 240px;
   height: 483px;
@@ -155,6 +165,10 @@ body {
 }
 
 .phone--horizontal {
+  /* Позиционирование */
+  top: 2px;
+  left: 6px;
+
   /* Блочная модель */
   width: 483px;
   height: 240px;
@@ -196,6 +210,7 @@ body {
   
   /* Оформление */
   background: url("assets/img/arrow-left.svg") no-repeat;
+  background-repeat: no-repeat;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -212,13 +227,13 @@ body {
 .slider__arrow--left {
   /* Позиционирование */
   position: relative;
-  left: 2px;
+  top: 2px;
 }
 
 .slider__arrow--right {
   /* Позиционирование */
   position: relative;
-  left: 1px;
+  top: 2px;
 
   /* Оформление */
   transform: rotate(180deg);
@@ -599,7 +614,7 @@ body {
 
 .input-text.input-text--textarea {
   /* Блочная модель */
-  height: 202px;
+  height: 159px;
   padding-top: 12px;
 }
 
@@ -708,35 +723,24 @@ body {
 .site-footer .wrapper{
   /* Блочная модель */
   align-items: center;
+  justify-content: center;
   height: 100%;
-}
-
-.copyright {
-  /* Позиционирование */
-  position: relative;
-  left: 2px;
-  bottom: 1px;
-
-  /* Типографика */
-  color: #666d89;
-  font-size: 12px;
-  letter-spacing: -0.0125em;
 }
 
 .form__submit {
   /* Блочная модель */
   height: 38px;
-  width: 100px;
+  width: 136px;
 
   /* Типографика */
   text-transform: uppercase;
-  color: #f0d8d9;
+  color: #886A30;
   font-weight: bold;
 
   /* Оформление */
   border: none;
-  background-color: #d6564f;
-  border-radius: 4px;
+  background: #FBC65F;
+  border-radius: 5px;
   outline: none;
   cursor: pointer;
 
