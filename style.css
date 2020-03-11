@@ -6,6 +6,10 @@
   font-family: "Lato", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* Блочная модель */
   min-width: 1020px;
@@ -412,6 +416,17 @@ body {
 .portfolio__work-image {
   /* Блочная модель */
   display: block;
+  box-sizing: border-box;
+  width: 220px;
+  height: 187px;
+
+  /* Оформление */
+  cursor: pointer;
+}
+
+.portfolio__work-image--active {
+  /* Оформление */
+  border: 5px solid #F06C64;
 }
 
 .about-us {
