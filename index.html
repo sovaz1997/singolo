@@ -9,6 +9,7 @@
   
   <link rel="stylesheet" href="./assets/fonts/fonts.css">
   <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
 </head>
 <body class="content preload">
   <header class="site-header">
@@ -18,11 +19,11 @@
       </a>
       <nav>
         <ul class="site-header__nav">
-          <li class="site-header__nav-item"><a href="#">Home</a></li>
-          <li class="site-header__nav-item"><a href="#services">Services</a></li>
-          <li class="site-header__nav-item"><a href="#portfolio">Portfolio</a></li>
-          <li class="site-header__nav-item"><a href="#about">About</a></li>
-          <li class="site-header__nav-item"><a href="#contact">Contact</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link site-header__nav-link--active" href="#home">Home</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#services">Services</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#about">About</a></li>
+          <li class="site-header__nav-item"><a class="site-header__nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -30,7 +31,7 @@
   
   <main class="site-content">
     <h1 class="visually-hidden">Singolo</h1>
-    <section class="slider">
+    <section class="slider" id="home">
       <h2 class="visually-hidden">Slider</h2>
       <div class="wrapper">
         <button type="button" class="slider__arrow slider__arrow--left" title="Left"></button>
@@ -147,10 +148,10 @@
         </ul>
       </div>
     </section>
-    <section class="about-us section">
+    <section class="about-us section" id="about">
       <div class="wrapper">
         <div class="section__header">
-          <h2 class="section__name" id="about">About Us</h2>
+          <h2 class="section__name">About Us</h2>
           <p class="section__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         </div>
 
