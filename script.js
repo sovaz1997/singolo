@@ -1,4 +1,6 @@
 window.onload = function() {
+  document.querySelector('body').classList.remove('preload');
+
   function makeActive(targetClass, container, target) {
     const activeClass = targetClass + '--active';
     container.forEach((el) => {
@@ -24,5 +26,13 @@ window.onload = function() {
 
   portfolio.addEventListener("click", (e) => {
     makeActive(portfolioItemClass, portfolioImages, e.target);
+  });
+
+  const phones = document.querySelectorAll('.phone');
+
+  phones.forEach((el) => {
+    el.addEventListener("click", () => {
+      el.classList.toggle("phone--off");
+    });
   });
 }

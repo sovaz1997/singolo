@@ -160,6 +160,7 @@ body {
 .phone {
   /* Позиционирование */
   position: relative;
+
   /* Блочная модель */
   flex-shrink: 0;
 
@@ -178,6 +179,15 @@ body {
 
   /* Оформление */
   background-image: url("assets/img/phone-vertical.svg"), url("assets/img/phone-vertical-shadow.png");
+}
+
+.phone__display {
+  /* Анимация */
+  transition: opacity cubic-bezier(0.47, 2.08, 0.61, 1.53);
+}
+
+.phone--off .phone__display {
+  opacity: 0;
 }
 
 .phone--horizontal {
