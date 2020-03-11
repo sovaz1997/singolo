@@ -183,7 +183,7 @@ body {
 
 .phone__display {
   /* Анимация */
-  transition: opacity cubic-bezier(0.47, 2.08, 0.61, 1.53);
+  transition: .27s opacity cubic-bezier(0.47, 2.08, 0.61, 1.53);
 }
 
 .phone--off .phone__display {
