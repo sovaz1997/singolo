@@ -41,6 +41,7 @@ body {
 .site-header {
   /* Позиционирование*/
   position: fixed;
+  top: 0;
   z-index: 1;
 
   /* Блочная модель */
@@ -56,7 +57,8 @@ body {
 :target::before {
   content: "";
   display: block;
-  height: 95px;
+  height: 95px; /* fixed header height*/
+  margin: -95px 0 0; /* negative fixed header height */
   visibility: hidden;
 }
 
@@ -148,6 +150,7 @@ body {
 .slider {
   /* Позиционирование */
   position: relative;
+  padding-top: 95px;
 
   /* Блочная модель */
   box-sizing: border-box;
