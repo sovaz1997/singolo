@@ -64,6 +64,30 @@ window.onload = function() {
     changeSliderBg(index);
   }
 
+  function addField(str, def) {
+    const res = !str.length ? def : str;
+    return res + "<br>";
+  }
+
+  function setModal(form) {
+    const inputSubject = form.querySelector("#input-subject");
+    const inputDetails = form.querySelector("#input-details");
+
+    const modal = document.querySelector(".modal");
+    const modalText = modal.querySelector(".modal__text");
+
+    let res = "Писмо отправлено<br>";
+
+    res += addField("Тема: " + inputSubject.value, "Без темы");
+    res += addField("Описание: " + inputDetails.value, "Без описания");
+    res += "ОК\n";
+
+    modalText.innerHTML = res;
+
+    modal.classList.add("modal--active");
+
+  }
+
   const menu = document.querySelector('.site-header__nav');
   const menuItemClass = "site-header__nav-link";
   const menuItems = menu.querySelectorAll('.' + menuItemClass);
@@ -113,4 +137,10 @@ window.onload = function() {
     nextSlide();
   });
 
+  const form = this.document.querySelector(".form");
+  
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    setModal(form);
+  });
 }
