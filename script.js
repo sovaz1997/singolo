@@ -3,12 +3,30 @@ window.onload = function() {
 
   function makeActive(targetClass, container, target) {
     const activeClass = targetClass + '--active';
+
     container.forEach((el) => {
       el.classList.remove(activeClass);
     });
     
     if(target.classList.contains(targetClass)) {
       target.classList.add(activeClass);
+    }
+  }
+
+  function rand(a, b) {
+    return Math.floor(Math.random() * (b - a) + a);
+  }
+
+  function swapNodes(childs, a, b) {
+    const parent = childs[a].parentNode;
+    const replaced = parent.replaceChild(childs[b], childs[a]);
+    parent.insertBefore(replaced, childs[b]);
+  }
+
+  function shuffleImages(images) {
+    for(let i = images.length - 1; i >= 1; --i) {
+      const newPosition = rand(0, i);
+      swapNodes(images, i, newPosition);
     }
   }
 
@@ -34,5 +52,17 @@ window.onload = function() {
     el.addEventListener("click", () => {
       el.classList.toggle("phone--off");
     });
+  });
+
+
+  const filter = document.querySelector('.filter');
+  const filterItemClass = "filter__item";
+  const filterItems = filter.querySelectorAll('.' + filterItemClass);
+
+  filter.addEventListener("click", (e) => {
+    makeActive(filterItemClass, filterItems, e.target);
+
+    const portfolioItems = portfolio.querySelectorAll(".portfolio__work-item");
+    shuffleImages(portfolioItems);
   });
 }
