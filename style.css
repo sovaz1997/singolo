@@ -152,9 +152,35 @@ body {
   /* Блочная модель */
   box-sizing: border-box;
   
+  transition: .2s ease-out;
+  
+}
+
+.slider--red {
   /* Оформление */
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
+}
+
+.slider--blue {
+  /* Оформление */
+  background-color: #648BF0;
+  border-bottom: 6px solid #5C85EF;
+}
+
+.slide {
+  opacity: 0;
+  display: none;
+  transition: all .27s ease-out;
+  height: 500px;
+}
+
+.slide--active {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+  position: relative;
 }
 
 .phone {
@@ -176,6 +202,7 @@ body {
   /* Блочная модель */
   width: 240px;
   height: 483px;
+  padding-right: 20px;
 
   /* Оформление */
   background-image: url("assets/img/phone-vertical.svg"), url("assets/img/phone-vertical-shadow.png");
@@ -233,16 +260,25 @@ body {
   /* Блочная модель */
   width: 16px;
   height: 27px;
+  padding: 0;
   
   /* Оформление */
-  background: url("assets/img/arrow-left.svg") no-repeat;
-  background-repeat: no-repeat;
+  background: none;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  outline: none;
 
   /* Анимация */
   transition: filter .27s ease-out;
+}
+
+.slider__arrow svg {
+  fill: #E94348;
+}
+
+.slider--blue .slider__arrow svg {
+  fill: #4574ED;
 }
 
 .slider__arrow:hover {
@@ -260,9 +296,6 @@ body {
   /* Позиционирование */
   position: relative;
   top: 2px;
-
-  /* Оформление */
-  transform: rotate(180deg);
 }
 
 .services {
