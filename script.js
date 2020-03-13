@@ -69,15 +69,34 @@ window.onload = function() {
     return res + "<br>";
   }
 
-  function setModal(form) {
-    const inputSubject = form.querySelector("#input-subject");
-    const inputDetails = form.querySelector("#input-details");
+  
+  const form = this.document.querySelector(".form");
 
-    const modal = document.querySelector(".modal");
-    const modalShadow = document.querySelector(".modal__shadow");
-    const modalText = modal.querySelector(".modal__text");
-    const modalClose = modal.querySelector(".modal__close");
+  const modal = document.querySelector(".modal");
+  const modalShadow = document.querySelector(".modal__shadow");
+  const modalText = modal.querySelector(".modal__text");
+  const modalClose = modal.querySelector(".modal__close");
 
+  const inputSubject = form.querySelector("#input-subject");
+  const inputDetails = form.querySelector("#input-details");
+
+  modalClose.addEventListener("click", () => {
+    modal.classList.remove("modal--active");
+  });
+
+  document.addEventListener("click", (e) => {
+    if(e.target === modalShadow) {
+      modal.classList.remove("modal--active");
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if(e.code === "Escape") {
+      modal.classList.remove("modal--active");
+    }
+  });
+
+  function setModal() {
     let res = "Писмо отправлено<br>";
 
     res += addField("Тема: " + inputSubject.value, "Без темы");
@@ -86,26 +105,6 @@ window.onload = function() {
     modalText.innerHTML = res;
 
     modal.classList.add("modal--active");
-
-    modalClose.addEventListener("click", () => {
-      modal.classList.remove("modal--active");
-      modalClose.removeEventListener(this);
-    });
-
-    document.addEventListener("click", (e) => {
-      if(e.target === modalShadow) {
-        modal.classList.remove("modal--active");
-        document.removeEventListener(this);
-      }
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if(e.code === "Escape") {
-        modal.classList.remove("modal--active");
-        document.removeEventListener(this);
-      }
-    });
-
   }
 
   const menu = document.querySelector('.site-header__nav');
@@ -156,11 +155,9 @@ window.onload = function() {
   sliderNextButton.addEventListener("click", () => {
     nextSlide();
   });
-
-  const form = this.document.querySelector(".form");
   
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    setModal(form);
+    setModal();
   });
 }
