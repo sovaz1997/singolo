@@ -7,6 +7,7 @@
 }
 
 html {
+  /* оформление */
   scroll-behavior: smooth;
 }
 
@@ -24,6 +25,7 @@ body {
 }
 
 .visually-hidden {
+  /* Служебные свойства */
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
   padding:0 !important;
@@ -60,11 +62,12 @@ body {
 }
 
 :target::before {
-  content: "";
+  /* Служебные свойства */
   display: block;
   height: var(--header-height); /* fixed header height*/
   margin: calc(var(--header-height) * -1) 0 0; /* negative fixed header height */
   visibility: hidden;
+  content: "";
 }
 
 .site-header .wrapper {
@@ -115,6 +118,7 @@ body {
 }
 
 .site-header__logo {
+  /* Позиционирование */
   position: relative;
   top: 2px;
 }
@@ -175,18 +179,25 @@ body {
 }
 
 .slide {
-  opacity: 0;
+  /* Блочная модель */
   display: none;
-  transition: all .27s ease-out;
   height: 500px;
+
+  /* Оформление */
+  opacity: 0;
+
+  /* Анимация */
+  transition: all .27s ease-out;
 }
 
 .slide--active {
+  /* Блочная модель */
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  /* Оформление */
   opacity: 1;
-  position: relative;
 }
 
 .phone {
@@ -280,7 +291,6 @@ body {
   transition: filter .27s ease-out,
               transform .27s ease-out;
 }
-
 
 .slider--blue .slider__arrow svg {
   fill: #5C85EF;
@@ -471,6 +481,7 @@ body {
 }
 
 .portfolio__work-item:nth-child(n+13) {
+  /* Блочная модель */
   display: none;
 }
 
@@ -577,6 +588,7 @@ body {
 }
 
 .social-list__item svg {
+  /* Оформление */
   fill: #666D89;
 }
 
@@ -717,7 +729,6 @@ body {
   font-size: 18px;
   font-weight: 900;
   line-height: 18px;
-  
 }
 
 .contact-information__description {
@@ -778,7 +789,6 @@ body {
 .contact--tel::before {
   /* Оформление */
   background-image: url("./assets/img/ico-phone.svg");
-
 }
 
 .contact--email::before {
@@ -830,16 +840,17 @@ body {
   box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.39);
 }
 
-
-
 .form__submit {
   /* Блочная модель */
   width: 136px;
 }
 
 .modal {
+  /* Позиционирование */
   position: relative;
   z-index: -1;
+  
+  /* Оформление */
   opacity: 0;
 
   /* Анимация */
@@ -848,7 +859,10 @@ body {
 }
 
 .modal--active {
+  /* Позиционирование*/
   z-index: 1;
+
+  /* Оформление */
   opacity: 1;
   
   /* Анимация */
@@ -857,44 +871,56 @@ body {
 }
 
 .modal__shadow {
-  width: 100%;
-  height: 100%;
+  /* Позиционирование */
   position: fixed;
   left: 0;
   top: 0;
   z-index: 9998;
 
+  /* Блочная модель */
+  width: 100%;
+  height: 100%;
   
+  /* Оформление */
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
 }
 
 .modal__window {
+  /* Позиционирование */
   position: fixed;
   z-index: 9999;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+
+  /* Блочная модель */
   padding: 40px;
+
+  /* Оформление*/
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
   box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.39);
 }
 
 .modal__text {
+  /* Блочная модель */
   margin-bottom: 10px;
 }
 
 .modal__close {
+  /* Блочная модель */
   padding: 5px;
   width: 100%;
+  
+  /* Типографика */
+  text-transform: uppercase;
+  color: #886A30;
+  font-weight: bold;
 
+  /* Оформление */
   border: none;
   background: #FBC65F;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-  
-  text-transform: uppercase;
-  color: #886A30;
-  font-weight: bold;
 }
