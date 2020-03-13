@@ -510,8 +510,7 @@ body {
 
 .portfolio__work-image--active {
   /* Оформление */
-  border: 5px solid #F06C64;
-  transform: scale(calc(220 / 210));
+  outline: 5px solid #F06C64;
 }
 
 .about-us {
