@@ -75,6 +75,7 @@ window.onload = function() {
 
     const modal = document.querySelector(".modal");
     const modalText = modal.querySelector(".modal__text");
+    const modalClose = modal.querySelector(".modal__close");
 
     let res = "Писмо отправлено<br>";
 
@@ -85,6 +86,11 @@ window.onload = function() {
     modalText.innerHTML = res;
 
     modal.classList.add("modal--active");
+
+    modalClose.addEventListener("click", () => {
+      modal.classList.remove("modal--active");
+      modalClose.removeEventListener(this);
+    });
 
   }
 
