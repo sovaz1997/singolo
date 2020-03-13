@@ -97,7 +97,14 @@ window.onload = function() {
         modal.classList.remove("modal--active");
         document.removeEventListener(this);
       }
-    })
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if(e.code === "Escape") {
+        modal.classList.remove("modal--active");
+        document.removeEventListener(this);
+      }
+    });
 
   }
 
