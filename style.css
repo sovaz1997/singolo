@@ -455,7 +455,6 @@ body {
 
   /* Оформление */
   list-style: none;
-  overflow: hidden;
 }
 
 .portfolio__work-image {
@@ -469,9 +468,14 @@ body {
   cursor: pointer;
 }
 
+.portfolio__work-item:nth-child(n+13) {
+  display: none;
+}
+
 .portfolio__work-image--active {
   /* Оформление */
   border: 5px solid #F06C64;
+  transform: scale(calc(220 / 210));
 }
 
 .about-us {
@@ -854,6 +858,10 @@ body {
   left: 0;
   top: 0;
   z-index: 9998;
+
+  
+  background-color: rgba(45, 48, 58, 0.7);
+  backdrop-filter: blur(10px);
 }
 
 .modal__window {
