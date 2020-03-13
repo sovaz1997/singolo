@@ -17,6 +17,9 @@ body {
   
   /* Переменные */
   --header-height: 80px;
+  --section-headers: #666D89;
+  --section-descriptions: #767E9E;
+  --section--light: #F0D8D9;
 }
 
 .preload * {
@@ -348,27 +351,49 @@ body {
   overflow: hidden;
 }
 
-.services__item-header {
-  /* Блочная модель */
-  padding-bottom: 10px;
+.article {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+}
+
+.article__header {
+  /* Блочная модель */
+  margin-bottom: 10px;
+  height: 20px;
+  display: inline-block;
   
   /* Типографика */
   font-size: 18px;
   line-height: 18px;
   font-weight: 900;
+  color: var(--section-headers);
+  
+  /* Оформление */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.services__item-description {
+.article__description {
   /* Блочная модель */
-  display: block;
+  display: inline-block;
 
   /* Типографика */
   font-size: 12px;
   line-height: 21px;
   color: #767e9e;
   text-align: justify;
+  color: var(--section-descriptions);
+
+  /* Оформление */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.article--light .article__header,
+.article--light .article__description {
+  color: var(--section--light);
 }
 
 .services__item-image {
@@ -399,14 +424,14 @@ body {
   /* Типографика */
   font-size: 30px;
   font-weight: 900;
-  color: #666d89;
+  color: var(--section-headers);
 }
 
 .section__description {
   /* Типографика */
   font-size: 18px;
   font-weight: 300;
-  color: #767e9e;
+  color: var(--section-descriptions);
 }
 
 .portfolio {
@@ -516,9 +541,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 443px;
-  
-  /* Типографика */
-  color: #666d89;
 
   /* Оформление */
   overflow: hidden;
@@ -528,32 +550,6 @@ body {
   /* Блочная модель */
   width: 300px;
   height: 300px;
-}
-
-.about-us__person-name {
-  /* Блочная модель */
-  height: 18px;
-  padding-top: 6px;
-  
-  /* Типографика */
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 900;
-
-  /* Оформление */
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.about-us__person-description {
-  /* Блочная модель */
-  padding-bottom: 13px;
-
-  /* Типографика */
-  font-size: 12px;
-  line-height: 21px;
-  color: #767e9e;
-  text-align: justify;
 }
 
 .social-list {
@@ -619,12 +615,12 @@ body {
 
 .section__header--light .section__name {
   /* Оформление */
-  color: #f0d8d9;
+  color: var(--section--light);
 }
 
 .section__header--light .section__description {
   /* Оформление */
-  color: #f0d8d9;
+  color: var(--section--light);
 }
 
 .quote {
@@ -719,24 +715,8 @@ body {
   color: #f0d8d9;
 }
 
-.contact-information__header {
-  /* Блочная модель */
-  margin-bottom: 10px;
-
-  /* Типографика */
-  font-size: 18px;
-  font-weight: 900;
-  line-height: 18px;
-}
-
-.contact-information__description {
-  /* Блочная модель */
-  margin-bottom: 29px;
-
-  /* Типографика */
-  font-size: 12px;
-  line-height: 21px;
-  text-align: justify;
+.contact-block {
+  padding-top: 30px;
 }
 
 .contact {
