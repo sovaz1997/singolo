@@ -46,12 +46,14 @@ body {
 
   /* Блочная модель */
   box-sizing: border-box;
-  height: 95px;
+  height: 80px;
   width: 100%;
 
   /* Оформление */
-  background-color: #2d303a;
-  border-bottom: 6px solid #323746;
+  background-color: rgba(45, 48, 58, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 7px -1px rgba(0,0,0,0.39);
+
 }
 
 :target::before {
@@ -74,7 +76,6 @@ body {
   /* Блочная модель */
   padding: 0;
   display: flex;
-  padding-top: 11px;
 
   /* Типографика */
   font-size: 12px;
