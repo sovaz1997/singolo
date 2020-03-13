@@ -74,6 +74,7 @@ window.onload = function() {
     const inputDetails = form.querySelector("#input-details");
 
     const modal = document.querySelector(".modal");
+    const modalShadow = document.querySelector(".modal__shadow");
     const modalText = modal.querySelector(".modal__text");
     const modalClose = modal.querySelector(".modal__close");
 
@@ -81,7 +82,6 @@ window.onload = function() {
 
     res += addField("Тема: " + inputSubject.value, "Без темы");
     res += addField("Описание: " + inputDetails.value, "Без описания");
-    res += "ОК\n";
 
     modalText.innerHTML = res;
 
@@ -91,6 +91,13 @@ window.onload = function() {
       modal.classList.remove("modal--active");
       modalClose.removeEventListener(this);
     });
+
+    document.addEventListener("click", (e) => {
+      if(e.target === modalShadow) {
+        modal.classList.remove("modal--active");
+        document.removeEventListener(this);
+      }
+    })
 
   }
 
