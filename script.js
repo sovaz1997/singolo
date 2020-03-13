@@ -82,19 +82,33 @@ window.onload = function() {
   const inputSubject = form.querySelector("#input-subject");
   const inputDetails = form.querySelector("#input-details");
 
-  modalClose.addEventListener("click", () => {
+  const content = this.document.querySelector(".content");
+
+  function openModal() {
+    modal.classList.add("modal--active");
+    content.classList.add("content--modal");
+  }
+
+  function closeModal() {
     modal.classList.remove("modal--active");
+    content.classList.remove("content--modal");
+  }
+
+
+
+  modalClose.addEventListener("click", () => {
+    closeModal()
   });
 
   document.addEventListener("click", (e) => {
     if(e.target === modalShadow) {
-      modal.classList.remove("modal--active");
+      closeModal()
     }
   });
 
   document.addEventListener("keydown", (e) => {
     if(e.code === "Escape") {
-      modal.classList.remove("modal--active");
+      closeModal()
     }
   });
 
@@ -106,7 +120,7 @@ window.onload = function() {
 
     modalText.innerHTML = res;
 
-    modal.classList.add("modal--active");
+    openModal();
   }
 
   const menu = document.querySelector('.site-header__nav');

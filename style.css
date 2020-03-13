@@ -22,6 +22,10 @@ body {
   --section--light: #F0D8D9;
 }
 
+.content--modal {
+  overflow: hidden;
+}
+
 .preload * {
   /* Анимация */
   transition: none !important;
