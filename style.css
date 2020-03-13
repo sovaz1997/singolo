@@ -807,6 +807,7 @@ body {
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+  user-select: none;
 
   /* Анимация */
   transition: .1s ease-out;
