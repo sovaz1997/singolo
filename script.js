@@ -163,7 +163,6 @@ window.onload = function() {
   const sliderPrevButton = document.querySelector(".slider__arrow--left");
   const sliderNextButton = document.querySelector(".slider__arrow--right");
 
-
   sliderPrevButton.addEventListener("click", () => {
     prevSlide();
   });

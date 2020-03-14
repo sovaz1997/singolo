@@ -12,9 +12,6 @@ html {
 }
 
 body {
-  /* Блочная модель */
-  min-width: 1020px;
-  
   /* Переменные */
   --header-height: 80px;
   --section-headers: #666D89;
@@ -333,10 +330,10 @@ body {
 .services__list {
   /* Блочная модель */
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
-  row-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px -20px 0;
+  
   padding-top: 36px;
 
   /* Оформление */
@@ -350,6 +347,10 @@ body {
   /* Блочная модель */
   padding-left: 80px;
   height: 104px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 300px;
+  box-sizing: border-box;
   
   /* Оформление */
   overflow: hidden;
@@ -485,23 +486,26 @@ body {
 .portfolio__works {
   /* Блочная модель */
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 18px;
-  max-height: 604px;
+  margin: 0 -20px -20px 0;
 
   /* Оформление */
   list-style: none;
+}
+
+.portfolio__work-item {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  flex-basis: 220px;
 }
 
 .portfolio__work-image {
   /* Блочная модель */
   display: block;
   box-sizing: border-box;
-  width: 220px;
-  height: 187px;
+  
 
   /* Оформление */
   cursor: pointer;
@@ -538,7 +542,7 @@ body {
   list-style: none;
 }
 
-.about-us__person {
+.person {
   /* Блочная модель */
   display: flex;
   flex-direction: column;
@@ -549,10 +553,10 @@ body {
   overflow: hidden;
 }
 
-.about-us__person-image {
-  /* Блочная модель */
-  width: 300px;
-  height: 300px;
+.person__image {
+  width: 100%;
+  display: block;
+  margin-bottom: 17px;
 }
 
 .social-list {
