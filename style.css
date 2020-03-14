@@ -547,7 +547,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 443px;
 
   /* Оформление */
   overflow: hidden;
@@ -557,6 +556,14 @@ body {
   width: 100%;
   display: block;
   margin-bottom: 17px;
+}
+
+.person__article {
+  margin-bottom: 12px;
+}
+
+.person__name {
+  margin-bottom: 7px;
 }
 
 .social-list {
