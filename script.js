@@ -1,38 +1,56 @@
 'use strict';
 
 window.onload = function() {
+  disableAnimationsOnLoading();
+  addNavClickHandler();
+  addModalHandlers();
+  addPortfolioImageHandler();
+  addPhonesHandler();
+  addFilterHandler();
+  addSliderHandler();
+  addFormHandler();
+}
+
+const addNavClickHandler = () => {
+  const menu = document.querySelector('.site-header__nav');
+  const menuItemClass = "site-header__nav-link";
+  const menuItems = menu.querySelectorAll('.' + menuItemClass);
+  
+  menu.addEventListener('click', (e) => {
+    makeActive(menuItemClass, menuItems, e.target);
+  });
+}
+
+const makeActive = (targetClass, container, target) => {
+  const activeClass = targetClass + '--active';
+
+  container.forEach((el) => {
+    el.classList.remove(activeClass);
+  });
+  
+  if(target.classList.contains(targetClass)) {
+    target.classList.add(activeClass);
+  }
+}
+
+const disableAnimationsOnLoading = () => {
   document.querySelector('body').classList.remove('preload');
+}
 
-  function makeActive(targetClass, container, target) {
-    const activeClass = targetClass + '--active';
-
-    container.forEach((el) => {
-      el.classList.remove(activeClass);
-    });
-    
-    if(target.classList.contains(targetClass)) {
-      target.classList.add(activeClass);
-    }
+const shuffleImages = (images) => {
+  for(let i = images.length - 1; i >= 1; --i) {
+    const newPosition = rand(0, i);
+    swapNodes(images, i, newPosition);
   }
+}
 
-  function rand(a, b) {
-    return Math.floor(Math.random() * (b - a) + a);
-  }
+const swapNodes = (childs, a, b) => {
+  const parent = childs[a].parentNode;
+  const replaced = parent.replaceChild(childs[b], childs[a]);
+  parent.insertBefore(replaced, childs[b]);
+}
 
-  function swapNodes(childs, a, b) {
-    const parent = childs[a].parentNode;
-    const replaced = parent.replaceChild(childs[b], childs[a]);
-    parent.insertBefore(replaced, childs[b]);
-  }
-
-  function shuffleImages(images) {
-    for(let i = images.length - 1; i >= 1; --i) {
-      const newPosition = rand(0, i);
-      swapNodes(images, i, newPosition);
-    }
-  }
-
-  const slider = document.querySelector(".slider");
+const slider = document.querySelector(".slider");
   const slides = slider.querySelectorAll(".slide");
 
   function sliderReset() {
@@ -48,54 +66,54 @@ window.onload = function() {
     return index;
   }
 
-  function changeSliderBg(slideNumber) {
-    slider.classList.toggle("slider--red", slideNumber === 0);
-    slider.classList.toggle("slider--blue", slideNumber === 1);
-  }
+const changeSliderBg = (slideNumber) => {
+  slider.classList.toggle("slider--red", slideNumber === 0);
+  slider.classList.toggle("slider--blue", slideNumber === 1);
+}
 
-  function nextSlide() {
-    let index = (sliderReset() + 1) % slides.length;
-    slides[index].classList.add("slide--active");
-    changeSliderBg(index);
-  }
+const nextSlide = () => {
+  let index = (sliderReset() + 1) % slides.length;
+  slides[index].classList.add("slide--active");
+  changeSliderBg(index);
+}
 
-  function prevSlide() {
-    let index = sliderReset() - 1;
-    if(index < 0) index = slides.length - 1;
-    slides[index].classList.add("slide--active");
-    changeSliderBg(index);
-  }
+const prevSlide = () => {
+  let index = sliderReset() - 1;
+  if(index < 0) index = slides.length - 1;
+  slides[index].classList.add("slide--active");
+  changeSliderBg(index);
+}
 
-  function addField(str, def) {
-    const res = !str.length ? def : str;
-    return res + "<br>";
-  }
+const rand = (a, b) => Math.floor(Math.random() * (b - a) + a);
 
-  
-  const form = this.document.querySelector(".form");
+const addField = (str, def) => {
+  const res = !str.length ? def : str;
+  return res + "<br>";
+}
 
-  const modal = document.querySelector(".modal");
-  const modalShadow = document.querySelector(".modal__shadow");
-  const modalText = modal.querySelector(".modal__text");
-  const modalClose = modal.querySelector(".modal__close");
+const form = document.querySelector(".form");
 
-  const inputSubject = form.querySelector("#input-subject");
-  const inputDetails = form.querySelector("#input-details");
+const modal = document.querySelector(".modal");
+const modalShadow = document.querySelector(".modal__shadow");
+const modalText = modal.querySelector(".modal__text");
+const modalClose = modal.querySelector(".modal__close");
 
-  const content = this.document.querySelector(".content");
+const inputSubject = form.querySelector("#input-subject");
+const inputDetails = form.querySelector("#input-details");
 
-  function openModal() {
-    modal.classList.add("modal--active");
-    content.classList.add("content--modal");
-  }
+const content = document.querySelector(".content");
 
-  function closeModal() {
-    modal.classList.remove("modal--active");
-    content.classList.remove("content--modal");
-  }
+const openModal = () => {
+  modal.classList.add("modal--active");
+  content.classList.add("content--modal");
+}
 
+const closeModal = () => {
+  modal.classList.remove("modal--active");
+  content.classList.remove("content--modal");
+}
 
-
+const addModalHandlers = () => {
   modalClose.addEventListener("click", () => {
     closeModal()
   });
@@ -111,43 +129,31 @@ window.onload = function() {
       closeModal()
     }
   });
+}
 
-  function setModal() {
-    let res = "Писмо отправлено<br>";
+const setModal = () => {
+  let res = "Писмо отправлено<br>";
 
-    res += addField("Тема: " + inputSubject.value, "Без темы");
-    res += addField("Описание: " + inputDetails.value, "Без описания");
+  res += addField("Тема: " + inputSubject.value, "Без темы");
+  res += addField("Описание: " + inputDetails.value, "Без описания");
 
-    modalText.innerHTML = res;
+  modalText.innerHTML = res;
 
-    openModal();
-  }
+  openModal();
+}
 
-  const menu = document.querySelector('.site-header__nav');
-  const menuItemClass = "site-header__nav-link";
-  const menuItems = menu.querySelectorAll('.' + menuItemClass);
-  
-  menu.addEventListener('click', (e) => {
-    makeActive(menuItemClass, menuItems, e.target);
-  });
+const portfolio = document.querySelector('.portfolio__works');
 
-  const portfolio = document.querySelector('.portfolio__works');
+const addPortfolioImageHandler = () => {
   const portfolioItemClass = "portfolio__work-image";
   const portfolioImages = portfolio.querySelectorAll('.' + portfolioItemClass);
 
   portfolio.addEventListener("click", (e) => {
     makeActive(portfolioItemClass, portfolioImages, e.target);
   });
+}
 
-  const phones = document.querySelectorAll('.phone');
-
-  phones.forEach((el) => {
-    el.addEventListener("click", () => {
-      el.classList.toggle("phone--off");
-    });
-  });
-
-
+const addFilterHandler = () => {
   const filter = document.querySelector('.filter');
   const filterItemClass = "filter__item";
   const filterItems = filter.querySelectorAll('.' + filterItemClass);
@@ -158,8 +164,19 @@ window.onload = function() {
     const portfolioItems = portfolio.querySelectorAll(".portfolio__work-item");
     shuffleImages(portfolioItems);
   });
+}
 
+const addPhonesHandler = () => {
+  const phones = document.querySelectorAll('.phone');
 
+  phones.forEach((el) => {
+    el.addEventListener("click", () => {
+      el.classList.toggle("phone--off");
+    });
+  });
+}
+
+const addSliderHandler = () => {
   const sliderPrevButton = document.querySelector(".slider__arrow--left");
   const sliderNextButton = document.querySelector(".slider__arrow--right");
 
@@ -170,7 +187,9 @@ window.onload = function() {
   sliderNextButton.addEventListener("click", () => {
     nextSlide();
   });
-  
+}
+
+const addFormHandler = () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     setModal();
