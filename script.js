@@ -163,6 +163,8 @@ const modalSubject = modal.querySelector(".modal__subject");
 const modalDescription = modal.querySelector(".modal__description");
 const modalClose = modal.querySelector(".modal__close");
 
+const inputName = form.querySelector("#input-name");
+const inputEmail = form.querySelector("#input-email");
 const inputSubject = form.querySelector("#input-subject");
 const inputDetails = form.querySelector("#input-details");
 
@@ -173,9 +175,17 @@ const openModal = () => {
   content.classList.add("content--modal");
 }
 
+const clearForm = () => {
+  inputName.value = "";
+  inputEmail.value = "";
+  inputSubject.value = "";
+  inputDetails.value = "";
+}
+
 const closeModal = () => {
   modal.classList.remove("modal--active");
   content.classList.remove("content--modal");
+  clearForm();
 }
 
 const addModalHandlers = () => {
