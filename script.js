@@ -21,15 +21,26 @@ const addNavClickHandler = () => {
   });
 }
 
-const makeActive = (targetClass, container, target) => {
+const makeActive = (targetClass, container, target, callback) => {
   const activeClass = targetClass + '--active';
 
+  let runCallback = true;
   container.forEach((el) => {
+    if(el.classList.contains(activeClass)) {
+      if(target === el) {
+        runCallback = false;
+      }
+    }
+
     el.classList.remove(activeClass);
   });
   
   if(target.classList.contains(targetClass)) {
     target.classList.add(activeClass);
+  }
+
+  if(callback && runCallback) {
+    callback();
   }
 }
 
@@ -159,10 +170,10 @@ const addFilterHandler = () => {
   const filterItems = filter.querySelectorAll('.' + filterItemClass);
 
   filter.addEventListener("click", (e) => {
-    makeActive(filterItemClass, filterItems, e.target);
-
-    const portfolioItems = portfolio.querySelectorAll(".portfolio__work-item");
-    shuffleImages(portfolioItems);
+    makeActive(filterItemClass, filterItems, e.target, () => {
+      const portfolioItems = portfolio.querySelectorAll(".portfolio__work-item");
+      shuffleImages(portfolioItems);
+    });
   });
 }
 
