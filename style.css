@@ -523,6 +523,10 @@ body {
   display: none;
 }
 
+.portfolio__work-image {
+  transition: outline .27s ease-out;
+}
+
 .portfolio__work-image--active {
   /* Оформление */
   outline: 5px solid #F06C64;
