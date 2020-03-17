@@ -19,7 +19,7 @@ const addScrollHandler = () => {
 const onScroll = () => {
   const menuItems = document.querySelectorAll('.site-header__nav-link');
   console.log(document.querySelectorAll('.section-start ~ section'));
-  const curPos = window.scrollY + 80;
+  const curPos = window.scrollY + 300;
   
   const sectionStarts = document.querySelectorAll('.section-start');
   const sectionContent = document.querySelectorAll('.section-start ~ section');
