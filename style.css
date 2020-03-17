@@ -241,7 +241,7 @@ body {
 
 
 .phone__body {
-  /* Блочная модель */
+  /* Позиционирование */
   position: absolute;
   z-index: 2;
   left: 0;
@@ -249,7 +249,7 @@ body {
 }
 
 .phone__shadow {
-  /* Блочная модель */
+  /* Позиционирование */
   position: absolute;
   z-index: 1;
   left: 0;
@@ -257,9 +257,10 @@ body {
 }
 
 .phone__display {
-  /* Блочная модель */
+  /* Позиционирование */
   position: absolute;
   z-index: 3;
+
 
   /* Анимация */
   transition: .27s opacity cubic-bezier(0.47, 2.08, 0.61, 1.53);
@@ -271,14 +272,30 @@ body {
 
 .phone--vertical .phone__display {
   /* Позиционирование */
-  left: 14px;
-  top: 65px;
+  left: 5.833333%;
+  top: 13.457557%;
+
+  /* Блочная модель */
+  width: 78.333333%;
 }
 
 .phone--horizontal .phone__display {
   /* Позиционирование */
-  left: 60px;
-  top: 14px;
+  left: 12.422360%;
+  top: 5.833333%;
+
+  /* Блочная модель */
+  width: 68.944099%;
+}
+
+.phone--vertical .phone__body {
+  /* Блочная модель */
+  width: 90%;
+}
+
+.phone--horizontal .phone__body {
+  /* Блочная модель */
+  width: 94.824017%;
 }
 
 .slider {
