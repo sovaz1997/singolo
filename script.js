@@ -109,14 +109,14 @@ const nextSlide = () => {
     {transform: 'translate(-100%)'},
     {transform: 'translate(0)'}
   ], {
-    duration: 270
+    duration: 500
   });
 
   slides[prevIndex].animate([
     {transform: 'translate(0)'},
     {transform: 'translate(100%)'}
   ], {
-    duration: 270
+    duration: 500
   });
 
   slides[newIndex].classList.add('slide--active');
@@ -134,14 +134,14 @@ const prevSlide = () => {
     {transform: 'translate(100%)'},
     {transform: 'translate(0)'}
   ], {
-    duration: 270
+    duration: 500
   });
 
   slides[prevIndex].animate([
     {transform: 'translate(0)'},
     {transform: 'translate(-100%)'}
   ], {
-    duration: 270
+    duration: 500
   });
 
 
