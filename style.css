@@ -186,7 +186,8 @@ body {
 .slide {
   /* Блочная модель */
   display: none;
-  height: 500px;
+  width: 800px;
+  height: 520px;
 
   /* Оформление */
   opacity: 0;
@@ -195,7 +196,7 @@ body {
 .slide--active {
   /* Блочная модель */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   /* Оформление */
@@ -203,55 +204,55 @@ body {
 }
 
 .phone {
-  /* Позиционирование */
   position: relative;
-
-  /* Блочная модель */
-  flex-shrink: 0;
-
-  /* Оформление */
-  background-repeat: no-repeat;
 }
 
 .phone--vertical {
   /* Позиционирование */
-  top: 1px;
-  right: 5px;
+  z-index: 2;
 
   /* Блочная модель */
   width: 240px;
   height: 483px;
-  padding-right: 20px;
+}
 
-  /* Оформление */
-  background-image: url("assets/img/phone-vertical.svg"), url("assets/img/phone-vertical-shadow.png");
+.phone--horizontal {
+  /* Позиционирование */
+  z-index: 1;
+
+  /* Блочная модель */
+  width: 483px;
+  height: 240px;
+}
+
+
+.phone__body {
+  /* Блочная модель */
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+.phone__shadow {
+  /* Блочная модель */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
 }
 
 .phone__display {
+  /* Блочная модель */
+  position: absolute;
+  z-index: 3;
+
   /* Анимация */
   transition: .27s opacity cubic-bezier(0.47, 2.08, 0.61, 1.53);
 }
 
 .phone--off .phone__display {
   opacity: 0;
-}
-
-.phone--horizontal {
-  /* Позиционирование */
-  top: 2px;
-  left: 6px;
-
-  /* Блочная модель */
-  width: 483px;
-  height: 240px;
-
-  /* Оформление */
-  background-image: url("assets/img/phone-horizontal.svg"), url("assets/img/phone-horizontal-shadow.png");
-}
-
-.phone .phone__display {
-  /* Позиционирование */
-  position: absolute;
 }
 
 .phone--vertical .phone__display {
@@ -264,6 +265,12 @@ body {
   /* Позиционирование */
   left: 60px;
   top: 14px;
+}
+
+.slider {
+  /* Позиционирование */
+  position: relative;
+  z-index: 0;
 }
 
 .slider .wrapper {

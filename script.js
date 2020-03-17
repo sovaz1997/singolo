@@ -170,8 +170,10 @@ const addPhonesHandler = () => {
   const phones = document.querySelectorAll('.phone');
 
   phones.forEach((el) => {
-    el.addEventListener("click", () => {
-      el.classList.toggle("phone--off");
+    el.addEventListener("click", (e) => {
+      if(!e.target.classList.contains('phone__shadow')) {
+        el.classList.toggle("phone--off");
+      }
     });
   });
 }
