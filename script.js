@@ -98,15 +98,16 @@ const prevSlide = () => {
 const rand = (a, b) => Math.floor(Math.random() * (b - a) + a);
 
 const addField = (str, def) => {
-  const res = !str.length ? def : str;
-  return res + "<br>";
+  return !str.length ? def : str;
 }
 
 const form = document.querySelector(".form");
 
 const modal = document.querySelector(".modal");
 const modalShadow = document.querySelector(".modal__shadow");
-const modalText = modal.querySelector(".modal__text");
+const modalHeader = modal.querySelector(".modal__header");
+const modalSubject = modal.querySelector(".modal__subject");
+const modalDescription = modal.querySelector(".modal__description");
 const modalClose = modal.querySelector(".modal__close");
 
 const inputSubject = form.querySelector("#input-subject");
@@ -143,12 +144,9 @@ const addModalHandlers = () => {
 }
 
 const setModal = () => {
-  let res = "Писмо отправлено<br>";
-
-  res += addField("Тема: " + inputSubject.value, "Без темы");
-  res += addField("Описание: " + inputDetails.value, "Без описания");
-
-  modalText.innerHTML = res;
+  modalHeader.innerText = "Писмо отправлено";
+  modalSubject.innerText = addField("Тема: " + inputSubject.value, "Без темы");
+  modalDescription.innerHTML = addField("Описание: " + inputDetails.value, "Без описания");
 
   openModal();
 }

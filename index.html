@@ -341,7 +341,7 @@
             <input id="input-subject" class="input-text" type="text" name="subject" placeholder="Subject">
             
             <label class="visually-hidden" for="input-details">Details:</label>
-            <textarea id="input-details" class="input-text input-text--textarea" name="details" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
+            <textarea maxlength="10000" id="input-details" class="input-text input-text--textarea" name="details" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
             <input class="form__submit button" type="submit" value="Send">
           </form>
           <div class="contact-information">
@@ -402,7 +402,9 @@
   <div class="modal">
     <div class="modal__shadow"></div>
     <div class="modal__window">
-      <p class="modal__text"></p>
+      <h2 class="modal__header"></h2>
+      <h3 class="modal__subject"></h3>
+      <p class="modal__description"></p>
       <button class="modal__close button">Ok</button>
     </div>
   </div>

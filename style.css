@@ -908,8 +908,23 @@ body {
 }
 
 .modal__text {
-  /* Блочная модель */
   margin-bottom: 10px;
+  max-height: 300px;
+  max-width: 600px;
+}
+
+.modal__description {
+  /* Блочная модель */
+
+  margin-bottom: 10px;
+
+  min-width: 300px;
+  min-height: 100px;
+  max-height: 300px;
+  max-width: 600px;
+
+  /* Оформление */
+  overflow: scroll;
 }
 
 .modal__close {
