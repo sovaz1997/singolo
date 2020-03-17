@@ -2,7 +2,7 @@
 
 window.onload = function() {
   disableAnimationsOnLoading();
-  addNavClickHandler();
+  addScrollHandler();
   addModalHandlers();
   addPortfolioImageHandler();
   addPhonesHandler();
@@ -11,13 +11,32 @@ window.onload = function() {
   addFormHandler();
 }
 
-const addNavClickHandler = () => {
-  const menu = document.querySelector('.site-header__nav');
-  const menuItemClass = "site-header__nav-link";
-  const menuItems = menu.querySelectorAll('.' + menuItemClass);
+const addScrollHandler = () => {
+  document.addEventListener("scroll", onScroll);
   
-  menu.addEventListener('click', (e) => {
-    makeActive(menuItemClass, menuItems, e.target);
+}
+
+const onScroll = () => {
+  const menuItems = document.querySelectorAll('.site-header__nav-link');
+  console.log(document.querySelectorAll('.section-start ~ section'));
+  const curPos = window.scrollY + 80;
+  
+  const sectionStarts = document.querySelectorAll('.section-start');
+  const sectionContent = document.querySelectorAll('.section-start ~ section');
+
+    console.log(curPos);
+
+  sectionStarts.forEach((el, index) => {
+    if(sectionContent[index].offsetTop <= curPos && sectionContent[index].offsetTop + sectionContent[index].offsetHeight > curPos) {
+      menuItems.forEach((a) => {
+        a.classList.remove('site-header__nav-link--active');
+        
+        console.log(el.getAttribute('id'), a.getAttribute('href').substring(1));
+        if(el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('site-header__nav-link--active');
+        }
+      });
+    }
   });
 }
 
