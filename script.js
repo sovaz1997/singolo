@@ -101,23 +101,22 @@ const changeSliderBg = (slideNumber) => {
   slider.classList.toggle("slider--blue", slideNumber === 1);
 }
 
+const animate = (target, from, to, duration, timingFunction) => {
+  target.animate([
+    {...from},
+    {...to},
+  ], {
+    duration: duration,
+    easing: timingFunction
+  });
+}
+
 const nextSlide = () => {
   let prevIndex = sliderReset();
   let newIndex = (prevIndex + 1) % slides.length;
 
-  slides[newIndex].animate([
-    {transform: 'translate(100%)'},
-    {transform: 'translate(0)'}
-  ], {
-    duration: 500
-  });
-
-  slides[prevIndex].animate([
-    {transform: 'translate(0)'},
-    {transform: 'translate(-100%)'}
-  ], {
-    duration: 500
-  });
+  animate(slides[newIndex], {transform: 'translate(100%)'}, {transform: 'translate(0)'}, 500, 'ease-in-out');
+  animate(slides[prevIndex], {transform: 'translate(0)'}, {transform: 'translate(-100%)'}, 500, 'ease-in-out');
 
   slides[newIndex].classList.add('slide--active');
   changeSliderBg(newIndex);
@@ -129,20 +128,8 @@ const prevSlide = () => {
 
   if(newIndex < 0) newIndex = slides.length - 1;
 
-  slides[newIndex].animate([
-    {transform: 'translate(-100%)'},
-    {transform: 'translate(0)'}
-  ], {
-    duration: 500
-  });
-
-  slides[prevIndex].animate([
-    {transform: 'translate(0)'},
-    {transform: 'translate(100%)'}
-  ], {
-    duration: 500
-  });
-
+  animate(slides[newIndex], {transform: 'translate(-100%)'}, {transform: 'translate(0)'}, 500, 'ease-in-out');
+  animate(slides[prevIndex], {transform: 'translate(0)'}, {transform: 'translate(100%)'}, 500, 'ease-in-out');
 
   slides[newIndex].classList.add('slide--active');
   changeSliderBg(newIndex);
