@@ -106,7 +106,7 @@ const nextSlide = () => {
   let newIndex = (prevIndex + 1) % slides.length;
 
   slides[newIndex].animate([
-    {transform: 'translate(-100%)'},
+    {transform: 'translate(100%)'},
     {transform: 'translate(0)'}
   ], {
     duration: 500
@@ -114,7 +114,7 @@ const nextSlide = () => {
 
   slides[prevIndex].animate([
     {transform: 'translate(0)'},
-    {transform: 'translate(100%)'}
+    {transform: 'translate(-100%)'}
   ], {
     duration: 500
   });
@@ -129,9 +129,8 @@ const prevSlide = () => {
 
   if(newIndex < 0) newIndex = slides.length - 1;
 
-
   slides[newIndex].animate([
-    {transform: 'translate(100%)'},
+    {transform: 'translate(-100%)'},
     {transform: 'translate(0)'}
   ], {
     duration: 500
@@ -139,7 +138,7 @@ const prevSlide = () => {
 
   slides[prevIndex].animate([
     {transform: 'translate(0)'},
-    {transform: 'translate(-100%)'}
+    {transform: 'translate(100%)'}
   ], {
     duration: 500
   });
