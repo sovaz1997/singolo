@@ -102,16 +102,51 @@ const changeSliderBg = (slideNumber) => {
 }
 
 const nextSlide = () => {
-  let index = (sliderReset() + 1) % slides.length;
-  slides[index].classList.add("slide--active");
-  changeSliderBg(index);
+  let prevIndex = sliderReset();
+  let newIndex = (prevIndex + 1) % slides.length;
+
+  slides[newIndex].animate([
+    {transform: 'translate(-100%)'},
+    {transform: 'translate(0)'}
+  ], {
+    duration: 270
+  });
+
+  slides[prevIndex].animate([
+    {transform: 'translate(0)'},
+    {transform: 'translate(100%)'}
+  ], {
+    duration: 270
+  });
+
+  slides[newIndex].classList.add('slide--active');
+  changeSliderBg(newIndex);
 }
 
 const prevSlide = () => {
-  let index = sliderReset() - 1;
-  if(index < 0) index = slides.length - 1;
-  slides[index].classList.add("slide--active");
-  changeSliderBg(index);
+  let prevIndex = sliderReset()
+  let newIndex = prevIndex - 1;
+
+  if(newIndex < 0) newIndex = slides.length - 1;
+
+
+  slides[newIndex].animate([
+    {transform: 'translate(100%)'},
+    {transform: 'translate(0)'}
+  ], {
+    duration: 270
+  });
+
+  slides[prevIndex].animate([
+    {transform: 'translate(0)'},
+    {transform: 'translate(-100%)'}
+  ], {
+    duration: 270
+  });
+
+
+  slides[newIndex].classList.add('slide--active');
+  changeSliderBg(newIndex);
 }
 
 const rand = (a, b) => Math.floor(Math.random() * (b - a) + a);
@@ -209,6 +244,8 @@ const addPhonesHandler = () => {
 const addSliderHandler = () => {
   const sliderPrevButton = document.querySelector(".slider__arrow--left");
   const sliderNextButton = document.querySelector(".slider__arrow--right");
+
+  const slide = document.querySelectorAll('slide');
 
   sliderPrevButton.addEventListener("click", () => {
     prevSlide();
