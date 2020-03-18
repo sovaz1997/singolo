@@ -129,6 +129,10 @@ body {
   /* Позиционирование */
   position: relative;
   top: 2px;
+
+
+  /* Оформление */
+  user-select: none;
 }
 
 .site-header__nav-item:not(:last-child)::after {
