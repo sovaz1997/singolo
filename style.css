@@ -194,6 +194,7 @@ body {
   display: flex;
   overflow: hidden;
   position: relative;
+  
 }
 
 .slide {
@@ -208,6 +209,8 @@ body {
 
   /* Оформление */
   opacity: 0;
+  z-index: -1;
+  user-select: none;
   transition: .5s step-end;
 }
 
@@ -217,7 +220,7 @@ body {
 
   /* Оформление */
   opacity: 1;
-  transition: .27s step-start;
+  transition: .5s step-start;
 }
 
 .phone {
@@ -511,7 +514,6 @@ body {
   background-color: transparent;
   outline: none;
   cursor: pointer;
-  user-select: none;
   
   /* Анимация */
   transition: .27s ease-out;
