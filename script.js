@@ -65,6 +65,7 @@ const makeActive = (targetClass, container, target, callback) => {
 
 const disableAnimationsOnLoading = () => {
   document.querySelector('body').classList.remove('preload');
+  document.querySelector('.slide__wrapper').classList.remove('visually-hidden');
 }
 
 const shuffleImages = (images) => {
