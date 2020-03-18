@@ -133,8 +133,8 @@ const prevSlide = () => {
 
 const rand = (a, b) => Math.floor(Math.random() * (b - a) + a);
 
-const addField = (str, def) => {
-  return !str.length ? def : str;
+const addField = (name, str, def) => {
+  return !str.length ? def : name + str;
 }
 
 const form = document.querySelector(".form");
@@ -191,8 +191,8 @@ const addModalHandlers = () => {
 
 const setModal = () => {
   modalHeader.innerText = "Писмо отправлено";
-  modalSubject.innerText = addField("Тема: " + inputSubject.value, "Без темы");
-  modalDescription.innerHTML = addField("Описание: " + inputDetails.value, "Без описания");
+  modalSubject.innerText = addField("Тема: ", inputSubject.value, "Без темы");
+  modalDescription.innerHTML = addField("Описание: ", inputDetails.value, "Без описания");
 
   openModal();
 }
