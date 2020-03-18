@@ -105,6 +105,9 @@ body {
   height: 30px;
   margin-left: 32.5px;
   margin-top: 18px;
+
+  /* Оформление */
+  user-select: none;
 }
 
 .site-header__nav-link {
@@ -508,6 +511,7 @@ body {
   background-color: transparent;
   outline: none;
   cursor: pointer;
+  user-select: none;
   
   /* Анимация */
   transition: .27s ease-out;
