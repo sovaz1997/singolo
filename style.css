@@ -210,10 +210,10 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 1;
 
   /* Оформление */
   opacity: 0;
-  z-index: -1;
   user-select: none;
   transition: .5s step-end;
 }
@@ -221,6 +221,7 @@ body {
 .slide--active {
   position: absolute;
   left: 0;
+  z-index: 2;
 
   /* Оформление */
   opacity: 1;
