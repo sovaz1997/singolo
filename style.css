@@ -518,6 +518,7 @@ body {
   background-color: transparent;
   outline: none;
   cursor: pointer;
+  user-select: none;
   
   /* Анимация */
   transition: .27s ease-out;

@@ -18,20 +18,15 @@ const addScrollHandler = () => {
 
 const onScroll = () => {
   const menuItems = document.querySelectorAll('.site-header__nav-link');
-  console.log(document.querySelectorAll('.section-start ~ section'));
   const curPos = window.scrollY + 300;
   
   const sectionStarts = document.querySelectorAll('.section-start');
   const sectionContent = document.querySelectorAll('.section-start ~ section');
 
-    console.log(curPos);
-
   sectionStarts.forEach((el, index) => {
     if(sectionContent[index].offsetTop <= curPos && sectionContent[index].offsetTop + sectionContent[index].offsetHeight > curPos) {
       menuItems.forEach((a) => {
         a.classList.remove('site-header__nav-link--active');
-        
-        console.log(el.getAttribute('id'), a.getAttribute('href').substring(1));
         if(el.getAttribute('id') === a.getAttribute('href').substring(1)) {
           a.classList.add('site-header__nav-link--active');
         }
@@ -220,8 +215,10 @@ const addFilterHandler = () => {
 
   filter.addEventListener("click", (e) => {
     makeActive(filterItemClass, filterItems, e.target, () => {
-      const portfolioItems = portfolio.querySelectorAll(".portfolio__work-item");
-      shuffleImages(portfolioItems);
+      if(e.target.classList.contains("filter__item")) {
+        const portfolioItems = portfolio.querySelectorAll(".portfolio__work-item");
+        shuffleImages(portfolioItems);
+      }
     });
   });
 }
