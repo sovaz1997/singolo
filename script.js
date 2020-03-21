@@ -239,8 +239,6 @@ const addSliderHandler = () => {
   const sliderPrevButton = document.querySelector(".slider__arrow--left");
   const sliderNextButton = document.querySelector(".slider__arrow--right");
 
-  const slide = document.querySelectorAll('slide');
-
   sliderPrevButton.addEventListener("click", () => {
     prevSlide();
   });

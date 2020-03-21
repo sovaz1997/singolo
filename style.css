@@ -193,12 +193,13 @@ body {
 
 .slide__wrapper {
   /* Блочная модель */
-  width: 800px;
-  height: 550px;
+  width: 80vw;
+  height: 55vw;
+  max-width: 800px;
+  max-height: 550px;
   display: flex;
   overflow: hidden;
   position: relative;
-  
 }
 
 .slide {
@@ -216,6 +217,10 @@ body {
   opacity: 0;
   user-select: none;
   transition: .5s step-end;
+}
+
+.slide__static-image {
+  height: 80%;
 }
 
 .slide--active {
@@ -237,8 +242,8 @@ body {
   z-index: 2;
 
   /* Блочная модель */
-  width: 240px;
-  height: 483px;
+  width: 30%;
+  height: 87.818182%;
 }
 
 .phone--horizontal {
@@ -246,8 +251,8 @@ body {
   z-index: 1;
 
   /* Блочная модель */
-  width: 483px;
-  height: 240px;
+  width: 60.375%;
+  height: 43.636363%;
 }
 
 
@@ -265,6 +270,10 @@ body {
   z-index: 1;
   left: 0;
   top: 0;
+
+  /* Блочная модель */
+  width: 100%;
+  height: 100%;
 }
 
 .phone__display {
@@ -986,4 +995,8 @@ body {
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1020px) {
+
 }
