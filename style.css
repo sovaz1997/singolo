@@ -793,9 +793,6 @@ body {
 }
 
 .contact-information {
-  /* Блочная модель */
-  width: 300px;
-
   /* Типографика */
   color: #f0d8d9;
 }
