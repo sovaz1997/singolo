@@ -389,9 +389,9 @@ body {
 .services__list {
   /* Блочная модель */
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -20px -20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
   
   padding-top: 36px;
 
@@ -405,10 +405,9 @@ body {
 
   /* Блочная модель */
   padding-left: 80px;
-  height: 104px;
+  max-height: 200px;
   margin-right: 20px;
   margin-bottom: 20px;
-  width: 300px;
   box-sizing: border-box;
   
   /* Оформление */
@@ -1012,9 +1011,13 @@ body {
     /* Блочная модель */
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .services__list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 600px) {
   .about-us__people-list {
     /* Блочная модель */
     grid-template-columns: 1fr;
@@ -1028,6 +1031,10 @@ body {
 
   .form__submit {
     width: 100%;
+  }
+
+  .services__list {
+    grid-template-columns: 1fr;
   }
 }
 
