@@ -287,6 +287,7 @@ body {
 }
 
 .phone--off .phone__display {
+  /* Оформление */
   opacity: 0;
 }
 
@@ -545,25 +546,20 @@ body {
 .portfolio__works {
   /* Блочная модель */
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
   padding-top: 18px;
-  margin: 0 -20px -20px 0;
 
   /* Оформление */
   list-style: none;
-}
-
-.portfolio__work-item {
-  margin-right: 20px;
-  margin-bottom: 20px;
-  flex-basis: 220px;
 }
 
 .portfolio__work-image {
   /* Блочная модель */
   display: block;
   box-sizing: border-box;
+  width: 100%;
   
 
   /* Оформление */
@@ -683,11 +679,20 @@ body {
   fill: #2d303a;
 }
 
-.flex-justify {
+.site-footer__wrapper {
   /* Блочная модель */
   display: flex;
   justify-content: space-between;
   flex-shrink: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.site-footer__wrapper {
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 18px;
+  color: #666D89;
 }
 
 .section__header--light .section__name {
@@ -711,14 +716,17 @@ body {
 
 .quote__content {
   /* Блочная модель */
-  margin-top: 33px;
+  padding-top: 33px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 2fr 1fr;
+  
 }
 
 .form {
   /* Блочная модель */
   display: flex;
   flex-direction: column;
-  width: 619px;
 }
 
 .input-text {
@@ -862,13 +870,6 @@ body {
   background-color: #2d303a;
 }
 
-.site-footer .wrapper{
-  /* Блочная модель */
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
 .button {
   /* Блочная модель */
   height: 38px;
@@ -997,6 +998,53 @@ body {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1020px) {
 
+
+@media only screen and (max-width: 1020px) {
+  .slider__wrapper.wrapper {
+    padding: 0 3.92%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+
+  .portfolio__works {
+    /* Блочная модель */
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .about-us__people-list {
+    /* Блочная модель */
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 33px;
+  }
+
+  .quote__content {  
+    grid-template-columns: 1fr;
+  }
+
+  .form__submit {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .portfolio__works {
+    /* Блочная модель */
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer__wrapper {
+    justify-content: center;
+  }
+
+  .site-footer__copyright {
+    display: none;
+  }
 }
