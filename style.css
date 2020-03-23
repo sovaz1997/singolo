@@ -11,12 +11,16 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+:root {
   /* Переменные */
   --header-height: 80px;
   --section-headers: #666D89;
   --section-descriptions: #767E9E;
   --section--light: #F0D8D9;
+}
+
+body {
+  min-width: 320px;
 }
 
 .content--modal {
@@ -61,7 +65,6 @@ body {
   /* Оформление */
   background-color: rgba(45, 48, 58, 0.7);
   backdrop-filter: blur(10px);
-  /*box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.5);*/
   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
 
 }
@@ -993,16 +996,11 @@ body {
   outline: none;
   cursor: pointer;
 }
-
-
-
 @media only screen and (max-width: 1020px) {
   .slider__wrapper.wrapper {
     padding: 0 3.92%;
   }
-}
 
-@media only screen and (max-width: 768px) {
   .wrapper {
     padding: 0 30px;
   }
@@ -1017,7 +1015,21 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  :root {
+    /* Переменные */
+    --header-height: 60px;
+  }
+
+  .quote {
+    padding: 0;
+  }
+
+  .section {
+    /* Блочная модель */
+    padding: 30px 0;
+  }
+
   .about-us__people-list {
     /* Блочная модель */
     grid-template-columns: 1fr;
@@ -1036,9 +1048,7 @@ body {
   .services__list {
     grid-template-columns: 1fr;
   }
-}
 
-@media only screen and (max-width: 375px) {
   .portfolio__works {
     /* Блочная модель */
     grid-template-columns: 1fr 1fr;
@@ -1050,5 +1060,14 @@ body {
 
   .site-footer__copyright {
     display: none;
+  }
+
+  .about-us__people-list {
+    gap: 50px;
+    padding-top: 20px;
+  }
+
+  .services__list {
+    padding-top: 20px;
   }
 }
