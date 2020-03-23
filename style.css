@@ -73,6 +73,7 @@ body {
 
 .site-header__burger {
   display: none;
+  outline: none;
   
   cursor: pointer;
   width: 25px;
