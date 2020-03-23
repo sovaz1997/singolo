@@ -154,9 +154,13 @@ const inputDetails = form.querySelector("#input-details");
 
 const content = document.querySelector(".content");
 
+const toggleScreen = (value) => {
+  content.classList.toggle("content--modal", value);
+}
+
 const openModal = () => {
   modal.classList.add("modal--active");
-  content.classList.add("content--modal");
+  toggleScreen(true);
 }
 
 const clearForm = () => {
@@ -168,7 +172,7 @@ const clearForm = () => {
 
 const closeModal = () => {
   modal.classList.remove("modal--active");
-  content.classList.remove("content--modal");
+  toggleScreen(false);
   clearForm();
 }
 
