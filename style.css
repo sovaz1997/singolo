@@ -67,6 +67,20 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
 
+  transition: height .27s linear,
+              background-color .27s linear;
+}
+
+.site-header__burger {
+  display: none;
+  
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  background-image: url("./assets/img/ico-burger.svg");
 }
 
 :target::before {
@@ -130,7 +144,6 @@ body {
   /* Позиционирование */
   position: relative;
   top: 2px;
-
 
   /* Оформление */
   user-select: none;
@@ -1016,6 +1029,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
   :root {
     /* Переменные */
     --header-height: 60px;
@@ -1069,5 +1086,65 @@ body {
 
   .services__list {
     padding-top: 20px;
+  }
+
+  .site-header__burger {
+    display: block;
+    position: absolute;
+    left: 20px;
+  }
+
+  .site-header .wrapper {
+    justify-content: center;
+  }
+
+  .quote__content {
+    /* Блочная модель */
+    padding-top: 20px;
+  }
+
+  .site-header {
+    
+    background-color: rgb(45, 48, 58);
+  }
+
+  .site-header__nav {
+    position: relative;
+    z-index: 3;
+    padding-left: 25%;
+    padding-top: 125px;
+    width: 75vw;
+    transform: translate(calc(-75vw - 5px));
+    box-sizing: border-box;
+
+    position: fixed;
+    left: 0;
+    top: var(--header-height);
+    height: calc(100vh - var(--header-height));
+    flex-direction: column;
+    background-color: #000000;
+
+    /* Оформление */
+    background-color: rgba(45, 48, 58);
+
+    /* Анимация */
+    transition: transform .27s ease-in-out;
+  }
+
+  .site-header__nav--active {
+    transform: translate(0);
+  }
+
+  .site-header__nav-item {
+    margin: 0 0 25px;
+  }
+
+  .site-header__nav-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .site-header__nav-link {
+    font-size: 24px;
+    line-height: 29px;
   }
 }

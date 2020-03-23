@@ -9,11 +9,12 @@ window.onload = function() {
   addFilterHandler();
   addSliderHandler();
   addFormHandler();
+  addBurgerHandler();
+  addMenuHandler();
 }
 
 const addScrollHandler = () => {
   document.addEventListener("scroll", onScroll);
-  
 }
 
 const onScroll = () => {
@@ -253,4 +254,32 @@ const addFormHandler = () => {
     e.preventDefault();
     setModal();
   });
+}
+
+const addBurgerHandler = () => {
+  const burgerButton = document.querySelector(".site-header__burger");
+  
+  burgerButton.addEventListener("click", () => {
+    toggleMenu();
+  });
+}
+
+const toggleMenu = (open) => {
+  const navMenu = document.querySelector(".site-header__nav");
+  
+  if(open !== undefined) {
+    navMenu.classList.toggle("site-header__nav--active", open);
+  } else {
+    navMenu.classList.toggle("site-header__nav--active");
+  }
+}
+
+const addMenuHandler = () => {
+  const navMenu = document.querySelector(".site-header__nav");
+
+  navMenu.addEventListener("click", (e) => {
+    if(e.target.classList.contains("site-header__nav-link")) {
+      toggleMenu(false);
+    }
+  })
 }
