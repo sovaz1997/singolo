@@ -266,11 +266,17 @@ const addBurgerHandler = () => {
 
 const toggleMenu = (open) => {
   const navMenu = document.querySelector(".site-header__nav");
+  const burgerButton = document.querySelector(".site-header__burger");
   
-  if(open !== undefined) {
-    navMenu.classList.toggle("site-header__nav--active", open);
+  toggle(navMenu, "site-header__nav--active", open);
+  toggle(burgerButton, "site-header__burger--active", open);
+}
+
+const toggle = (selector, className, value) => {
+  if(value !== undefined) {
+    selector.classList.toggle(className, value);
   } else {
-    navMenu.classList.toggle("site-header__nav--active");
+    selector.classList.toggle(className);
   }
 }
 
