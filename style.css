@@ -105,9 +105,7 @@ body {
   position: relative;
 
   /* Блочная модель */
-  height: 30px;
   margin-left: 32.5px;
-  margin-top: 18px;
 
   /* Оформление */
   user-select: none;
@@ -116,12 +114,12 @@ body {
 .site-header__nav-link {
   /* Блочная модель */
   display: block;
-  height: 100%;
 
   /* Типографика */
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+  line-height: 30px;
   letter-spacing: -0.035em;
   
   /* Анимация */
@@ -146,6 +144,7 @@ body {
 
   /* Блочная модель */
   display: block;
+  line-height: 30px;
   
   /* Типографика */
   color: #ffffff;
