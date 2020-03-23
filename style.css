@@ -409,6 +409,7 @@ body {
   /* Блочная модель */
   padding-left: 80px;
   max-height: 200px;
+  min-height: 60px;
   margin-right: 20px;
   margin-bottom: 20px;
   box-sizing: border-box;
