@@ -885,6 +885,10 @@ body {
   background-image: url("./assets/img/ico-mail.svg");
 }
 
+.site-header__nav-shadow {
+  display: none;
+}
+
 .site-footer {
   /* Блочная модель */
   height: 76px;
@@ -1172,6 +1176,7 @@ body {
   }
 
   .site-header__nav-shadow {
+    display: block;
     width: 100vw;
     height: 100vh;
     background: #2D303A;
@@ -1204,5 +1209,9 @@ body {
   .site-header__nav-link {
     font-size: 24px;
     line-height: 29px;
+  }
+
+  .portfolio__work-item:nth-child(n+9) {
+    display: none;
   }
 }
