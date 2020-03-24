@@ -271,9 +271,11 @@ const addBurgerHandler = () => {
 const toggleMenu = (open) => {
   const navMenu = document.querySelector(".site-header__nav");
   const burgerButton = document.querySelector(".site-header__burger");
+  const headerLogo = document.querySelector(".site-header__logo");
   
   toggle(navMenu, "site-header__nav--active", open);
   toggle(burgerButton, "site-header__burger--active", open);
+  toggle(headerLogo, "site-header__logo--menu-active", open)
 }
 
 const toggle = (selector, className, value) => {

@@ -85,6 +85,9 @@ body {
   padding: 0;
   background-image: url("./assets/img/ico-burger.svg");
   transition: transform .27s ease-in-out;
+
+  position: relative;
+  z-index: 1;
 }
 
 .site-header__burger--active {
@@ -1116,19 +1119,35 @@ body {
     background-color: rgb(45, 48, 58);
   }
 
+  .site-header__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    transition: left .27s ease-in-out,
+                transform .27s ease-in-out;
+  }
+
+  .site-header__logo--menu-active {
+    left: 70px;
+    transform: translate(0, -50%);
+  }
+
   .site-header__nav {
     opacity: 0;
     position: absolute;
-    z-index: 3;
-    padding-left: 25%;
-    padding-top: 125px;
-    width: 75vw;
+    z-index: 0;
+    padding-left: 70px;
+    padding-top: 185px;
+    width: 278px;
     left: calc(-75vw - 5px);
     box-sizing: border-box;
 
     position: fixed;
-    top: var(--header-height);
-    height: calc(100vh - var(--header-height));
+    top: 0;
+    height: 100vh;
     flex-direction: column;
     background-color: #000000;
 
@@ -1138,15 +1157,18 @@ body {
     /* Анимация */
     transition: left .27s ease-in-out,
     opacity .27s step-end;
+
+
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
   }
 
   .site-header__nav--active {
     left: 0;
-
     opacity: 1;
+
     /* Анимация */
     transition: left .27s ease-in-out,
-    opacity .27s step-start;
+                opacity .27s step-start;
   }
 
   .site-header__nav-item {
