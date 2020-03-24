@@ -1144,7 +1144,8 @@ body {
     position: absolute;
     z-index: 0;
     padding-left: 70px;
-    padding-top: 185px;
+    
+    
     width: 278px;
     left: calc(-75vw - 5px);
     box-sizing: border-box;
@@ -1153,6 +1154,7 @@ body {
     top: 0;
     height: 100vh;
     flex-direction: column;
+    justify-content: center;
     background-color: #000000;
 
     /* Оформление */
@@ -1213,5 +1215,16 @@ body {
 
   .portfolio__work-item:nth-child(n+9) {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+  .site-header__nav-item {
+    margin: 0 0 10px;
+  }
+
+  .site-header__nav-link {
+    font-size: 24px;
+    line-height: 29px;
   }
 }
