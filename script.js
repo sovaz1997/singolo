@@ -263,8 +263,9 @@ const addFormHandler = () => {
 const addBurgerHandler = () => {
   const burgerButton = document.querySelector(".site-header__burger");
   
-  burgerButton.addEventListener("click", () => {
+  burgerButton.addEventListener("click", (e) => {
     toggleMenu();
+    e.stopPropagation();
   });
 }
 
@@ -286,11 +287,27 @@ const toggle = (selector, className, value) => {
   }
 }
 
+const opennedMenu = () => {
+  return document.querySelector(".site-header__nav").classList.contains("site-header__nav--active");
+}
+
 const addMenuHandler = () => {
   const navMenu = document.querySelector(".site-header__nav");
 
   navMenu.addEventListener("click", (e) => {
     if(e.target.classList.contains("site-header__nav-link")) {
+      toggleMenu(false);
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if((!e.target.classList.contains("site-header__nav")) && opennedMenu()) {
+      toggleMenu(false);
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if(e.code === "Escape" && opennedMenu()) {
       toggleMenu(false);
     }
   })
