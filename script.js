@@ -195,9 +195,9 @@ const addModalHandlers = () => {
 }
 
 const setModal = () => {
-  modalHeader.innerText = "Писмо отправлено";
-  modalSubject.innerText = addField("Тема: ", inputSubject.value, "Без темы");
-  modalDescription.innerText = addField("Описание: ", inputDetails.value, "Без описания");
+  modalHeader.innerText = "The letter was sent";
+  modalSubject.innerText = addField("Subject: ", inputSubject.value, "No subject");
+  modalDescription.innerText = addField("Description: ", inputDetails.value, "No description");
 
   openModal();
 }
