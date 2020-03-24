@@ -273,10 +273,12 @@ const toggleMenu = (open) => {
   const navMenu = document.querySelector(".site-header__nav");
   const burgerButton = document.querySelector(".site-header__burger");
   const headerLogo = document.querySelector(".site-header__logo");
+  const navShadow = document.querySelector(".site-header__nav-shadow");
   
   toggle(navMenu, "site-header__nav--active", open);
   toggle(burgerButton, "site-header__burger--active", open);
-  toggle(headerLogo, "site-header__logo--menu-active", open)
+  toggle(headerLogo, "site-header__logo--menu-active", open);
+  toggle(navShadow, "site-header__nav-shadow--active", open);
 }
 
 const toggle = (selector, className, value) => {
@@ -300,10 +302,11 @@ const addMenuHandler = () => {
     }
   });
 
-  document.addEventListener("click", (e) => {
-    if((!e.target.classList.contains("site-header__nav")) && opennedMenu()) {
-      toggleMenu(false);
-    }
+  
+  const navShadow = document.querySelector(".site-header__nav-shadow");
+
+  navShadow.addEventListener("click", (e) => {
+    toggleMenu(false);
   });
 
   document.addEventListener("keydown", (e) => {

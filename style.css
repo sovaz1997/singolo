@@ -1171,6 +1171,28 @@ body {
                 opacity .27s step-start;
   }
 
+  .site-header__nav-shadow {
+    width: 100vw;
+    height: 100vh;
+    background: #2D303A;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    opacity: 0;
+
+    left: -100%;
+    transition: opacity .27s ease-in-out,
+                left .27s step-end;
+  }
+
+  .site-header__nav-shadow--active {
+    opacity: 0.6;
+    left: 0;
+
+    transition: opacity .27s ease-in-out,
+                left .27s step-start;
+  }
+
   .site-header__nav-item {
     margin: 0 0 25px;
   }
