@@ -1157,6 +1157,7 @@ body {
     position: absolute;
     z-index: 0;
     padding-left: 70px;
+    min-height: 320px;
     
     
     width: 278px;
