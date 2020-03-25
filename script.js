@@ -11,13 +11,24 @@ window.onload = function() {
   addFormHandler();
   addBurgerHandler();
   addMenuHandler();
+  addResizeHandler();
 }
 
 const addScrollHandler = () => {
   document.addEventListener("scroll", onScroll);
 }
 
-const onScroll = () => {
+const updateHeaderHeight = () => {
+  const style = getComputedStyle(document.body);
+
+  const big = style.getPropertyValue("--header-height-default-big");
+  const small = style.getPropertyValue("--header-height-default-small");
+
+  const root = document.querySelector(":root");
+  root.style.setProperty("--header-height", window.scrollY > 30 ? small : big);
+}
+
+const updateActiveLink = () => {
   const menuItems = document.querySelectorAll('.site-header__nav-link');
   const curPos = window.scrollY + 80;
   
@@ -34,6 +45,11 @@ const onScroll = () => {
       });
     }
   });
+};
+
+const onScroll = () => {
+  updateActiveLink();
+  updateHeaderHeight();
 }
 
 const makeActive = (targetClass, container, target, callback) => {
@@ -314,4 +330,11 @@ const addMenuHandler = () => {
       toggleMenu(false);
     }
   })
+}
+
+const addResizeHandler = () => {
+  window.addEventListener("resize", () => {
+    console.log('!')
+    updateHeaderHeight();
+  });
 }

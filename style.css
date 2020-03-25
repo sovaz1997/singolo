@@ -13,7 +13,12 @@ html {
 
 :root {
   /* Переменные */
-  --header-height: 80px;
+  --header-height-default-big: 80px;
+  --header-height-default-small: 60px;
+
+  --header-height: var(--header-height-default-big);
+
+
   --section-headers: #666D89;
   --section-descriptions: #767E9E;
   --section--light: #F0D8D9;
@@ -69,8 +74,12 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.5);
 
-  transition: height .27s linear,
-              background-color .27s linear;
+  transition: height .16s linear,
+              background-color .16s linear;
+}
+
+.site-header--mini {
+  height: 60px;
 }
 
 .site-header__burger {
@@ -1050,7 +1059,8 @@ body {
 
   :root {
     /* Переменные */
-    --header-height: 60px;
+    --header-height-default-big: 60px;
+    --header-height-default-small: 60px;
   }
 
   .quote {
