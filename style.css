@@ -1061,8 +1061,8 @@ body {
 
   :root {
     /* Переменные */
-    --header-height-default-big: 60px;
-    --header-height-default-small: 60px;
+    --header-height-default-big: 71px;
+    --header-height-default-small: 55px;
   }
 
   .quote {
