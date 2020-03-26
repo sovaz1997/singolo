@@ -317,7 +317,6 @@ const addMenuHandler = () => {
       toggleMenu(false);
     }
   });
-
   
   const navShadow = document.querySelector(".site-header__nav-shadow");
 
@@ -334,7 +333,6 @@ const addMenuHandler = () => {
 
 const addResizeHandler = () => {
   window.addEventListener("resize", () => {
-    console.log('!')
     updateHeaderHeight();
   });
 }
