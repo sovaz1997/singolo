@@ -367,8 +367,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 53px;
-  padding-bottom: 58px;
+  padding-top: 21px;
+  padding-bottom: 23px;
 }
 
 .slider__arrow {
