@@ -52,7 +52,7 @@ const onScroll = () => {
   updateHeaderHeight();
 }
 
-const makeActive = (targetClass, container, target, callback) => {
+const makeActive = (targetClass, container, target, callback, toggle) => {
   const activeClass = targetClass + '--active';
 
   let runCallback = true;
@@ -62,12 +62,18 @@ const makeActive = (targetClass, container, target, callback) => {
         runCallback = false;
       }
     }
-
-    el.classList.remove(activeClass);
+    
+    if(target !== el) {
+      el.classList.remove(activeClass);
+    }
   });
   
   if(target.classList.contains(targetClass)) {
-    target.classList.add(activeClass);
+    if(toggle) {
+      target.classList.toggle(activeClass);
+    } else {
+      target.classList.add(activeClass);
+    }
   }
 
   if(callback && runCallback) {
@@ -225,7 +231,7 @@ const addPortfolioImageHandler = () => {
   const portfolioImages = portfolio.querySelectorAll('.' + portfolioItemClass);
 
   portfolio.addEventListener("click", (e) => {
-    makeActive(portfolioItemClass, portfolioImages, e.target);
+    makeActive(portfolioItemClass, portfolioImages, e.target, undefined, true);
   });
 }
 

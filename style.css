@@ -609,12 +609,14 @@ body {
 }
 
 .portfolio__work-image {
+  /* Оформление */
+  outline: 0px solid #F06C64;
   transition: outline .27s ease-out;
 }
 
 .portfolio__work-image--active {
   /* Оформление */
-  outline: 5px solid #F06C64;
+  outline-width: 5px;
 }
 
 .about-us {
