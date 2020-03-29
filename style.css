@@ -1097,7 +1097,7 @@ body {
   .portfolio__works {
     /* Блочная модель */
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 14px;
   }
 
   .site-footer__wrapper {
@@ -1244,12 +1244,14 @@ body {
   }
 }
 
-@media only screen and (max-width: 374px) {
+@media only screen and (max-width: 400px) {
   .filter__item {
     padding-left: 5px;
     padding-right: 5px;
   }
+}
 
+@media only screen and (max-width: 374px) {
   .filter__item {
     font-size: 10px;
   }
